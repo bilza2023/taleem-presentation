@@ -41,6 +41,7 @@ declare module '$env/static/private' {
 	export const DESKTOP_SESSION: string;
 	export const npm_package_json: string;
 	export const GIO_LAUNCHED_DESKTOP_FILE: string;
+	export const npm_package_engines_node: string;
 	export const GNOME_SHELL_SESSION_MODE: string;
 	export const GTK_MODULES: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
@@ -162,6 +163,7 @@ declare module '$env/dynamic/private' {
 		DESKTOP_SESSION: string;
 		npm_package_json: string;
 		GIO_LAUNCHED_DESKTOP_FILE: string;
+		npm_package_engines_node: string;
 		GNOME_SHELL_SESSION_MODE: string;
 		GTK_MODULES: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;

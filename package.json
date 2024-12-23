@@ -12,6 +12,10 @@
   "svelte": "./src/lib/index.js",
   "main": "./src/lib/index.js",
   "description": "taleemPresentation library is an educational tool to run presentations. These presentations are in the form of slides which are run by this library. Students , techers , reserchers can create their own presentations and they will always be played the this library.",
+ 
+  "engines": {
+  "node": ">=18.x" 
+},
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
