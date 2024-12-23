@@ -2,6 +2,7 @@ import Canvas from "./canvas";
 import Eqs from "./eqs";
 // import upgrade2Basic from "./upgrade2Basic";
 import uuid from "../uuid";
+import getNewItem from "./getNewItem";
 import CanvasPlayer from "../canvas/CanvasPlayer/CanvasPlayer.svelte";
 import CanvasEditor from "../canvas/CanvasEditor/CanvasEditor.svelte";
 import UnknownslideTypePlayer from "../unknownSlideType/UnknownslideTypePlayer.svelte";
@@ -27,21 +28,7 @@ export default class SlideObject {
     // }
 
     static getNewItem( itemExtra = {} , name='',content='') {
-        if (!name) {
-          const uuidValue = uuid();
-          const firstSegment = uuidValue.split('-')[0];
-          name = firstSegment;
-        }
-        
-      return {
-          uuid: uuid() , //added on 31-may 2024 --not used yet 
-          name , 
-          content, 
-          showAt :0, 
-          hideAt :null, //added on 31-may 2024 --not used yet
-          itemExtra,
-      };
-      
+      return getNewItem(itemExtra, name, content);
     }
   
     static getNewSlide(type) {

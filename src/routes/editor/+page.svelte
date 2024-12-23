@@ -24,7 +24,7 @@
     slides = [...incomming];
  }
 onMount(async()=>{
-      const s = SlideObject.Canvas.getDemoSlide();
+      const s = SlideObject.Canvas.getDynamicDemoSlide();
       const report = await healthCheckCanvas(s);
       console.log('report' , report);
       slides = [s];

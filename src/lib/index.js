@@ -4,6 +4,8 @@ import Editor from './presentation/editor/Editor.svelte';
 import Player from './presentation/players/Player.svelte';
 import SlideObject from "./slides/slideObject/slideObject";
 import ItemsMap from "./slides/canvas/staticItems/ItemsMap";
+import updateSlides from "./updateSlides/updateSlides";
+
 
 import {
         healthCheckCanvas,
@@ -27,5 +29,6 @@ export {
     CanvasEditor,
     CanvasPlayer,
     EqPlayer,
-    EqsEditor
+    EqsEditor,
+    updateSlides
 }
