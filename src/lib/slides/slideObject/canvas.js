@@ -1,8 +1,8 @@
 
 import ItemsMap from '../canvas/staticItems/ItemsMap';
 import {Slide} from "../canvas/samples/demoSlide";
-import uuid from "../uuid";
 import getNewItem from "./getNewItem";
+import getNewSlide from "./getNewSlide";
 
 export default class Canvas {
 
@@ -13,9 +13,8 @@ export default class Canvas {
     }
  
     static getDynamicDemoSlide() {
-      let xx= 10;
-      let yy=50;
-
+      let xx= 10; let yy=50;
+      
       let dynSlide = Canvas.getNewSlide();
     
       // Iterate over the keys (itemTypes) in ItemsMap
@@ -23,10 +22,10 @@ export default class Canvas {
         try {
           const newItem = Canvas.getCanvasNewItem(itemType);
       
-          newItem.itemExtra.x = xx; 
-          newItem.itemExtra.y = yy;
-          xx += 50;
-          yy += 4;
+          newItem.itemExtra.x = xx; newItem.itemExtra.y = yy;
+          
+          xx += 50;yy += 4;
+
           dynSlide.items.push(newItem);
         } catch (error) {
           console.error(`Error creating item of type ${itemType}:`, error);
@@ -52,16 +51,7 @@ export default class Canvas {
      */
     static getNewSlide() {
         const slideExtra = Canvas.getSlideExtra();
-        return {
-            uuid: uuid(),
-            version: 'basic',
-            startTime: 0,
-            endTime: 10,
-            type: 'canvas', // canvas is fixed here 
-            template: '',
-            items: [],
-            slideExtra,
-        }
+        return getNewSlide('canvas' , slideExtra);
     }
     static getSlideExtra(){
         return {

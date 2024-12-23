@@ -1,8 +1,10 @@
 import Canvas from "./canvas";
 import Eqs from "./eqs";
 // import upgrade2Basic from "./upgrade2Basic";
-import uuid from "../uuid";
+// import uuid from "./uuid";
 import getNewItem from "./getNewItem";
+import getNewSlide from "./getNewSlide";
+
 import CanvasPlayer from "../canvas/CanvasPlayer/CanvasPlayer.svelte";
 import CanvasEditor from "../canvas/CanvasEditor/CanvasEditor.svelte";
 import UnknownslideTypePlayer from "../unknownSlideType/UnknownslideTypePlayer.svelte";
@@ -39,24 +41,14 @@ export default class SlideObject {
             return Canvas.getNewSlide();
         }
         if(type === 'Eqs'){
-            let slide = SlideObject.getDefaultSlide();
-            slide.type = 'Eqs';
+            let slide = getNewSlide('Eqs');
+            // slide.type = 'Eqs';
             return slide;
         }
     }
     //This has the fields required at slide level.
     static getDefaultSlide() {
-    
-        return {
-            uuid : uuid(),
-            version : 'basic',
-            startTime : 0,
-            endTime : 10,
-            type : '', 
-            template : '',
-            items : [],
-            slideExtra : {},
-        }
+        return getNewSlide();
     }
 
     static availableSlideTypes(){
