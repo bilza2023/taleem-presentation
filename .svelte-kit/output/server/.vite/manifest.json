@@ -15,15 +15,6 @@
       "_ssr.js"
     ]
   },
-  "_Player.js": {
-    "file": "chunks/Player.js",
-    "name": "Player",
-    "imports": [
-      "_ssr.js",
-      "_client.js",
-      "_slideObject.js"
-    ]
-  },
   "_client.js": {
     "file": "chunks/client.js",
     "name": "client",
@@ -168,7 +159,7 @@
     "imports": [
       "_ssr.js",
       "_slideObject.js",
-      "_Player.js",
+      "_client.js",
       "_OpenFileButton.js"
     ]
   },
@@ -180,7 +171,11 @@
     "imports": [
       "_ssr.js",
       "_slideObject.js",
-      "_Player.js"
+      "_client.js",
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.Bn1lMYWi.css"
     ]
   }
 }

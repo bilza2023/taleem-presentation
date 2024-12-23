@@ -345,7 +345,7 @@ const CanvasPlayer = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_ctxStore();
   return `<div class="flex justify-center w-full"><canvas class="w-full m-2"${add_attribute("width", slideExtra.canvasWidth, 0)}${add_attribute("height", slideExtra.canvasHeight, 0)}${add_attribute("this", canvas, 0)}></canvas></div>`;
 });
-function uuid() {
+function uuid$1() {
   const randomHex = () => Math.floor(Math.random() * 16).toString(16);
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
     const r = randomHex();
@@ -3965,7 +3965,7 @@ const CanvasEditor = create_ssr_component(($$result, $$props, $$bindings, slots)
   }
   function addNewItem(itemType) {
     const newItemExtra = ItemsMap2.get(itemType).data();
-    const firstSegment = uuid().split("-")[0];
+    const firstSegment = uuid$1().split("-")[0];
     const name = newItemExtra.type + "_" + firstSegment;
     const newItem = SlideObject.getNewItem(newItemExtra, name);
     items.unshift(newItem);
@@ -5120,7 +5120,7 @@ function registerSlideTypes() {
 class TextObject2 {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "text",
       x: 100,
       y: 100,
@@ -5167,7 +5167,7 @@ class TextObject2 {
 class Rectangle2 {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "rectangle",
       x: 100,
       y: 100,
@@ -5226,7 +5226,7 @@ class Rectangle2 {
 class Ellipse {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "ellipse",
       x: 100,
       y: 100,
@@ -5293,7 +5293,7 @@ class Ellipse {
 class Angle {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "angle",
       x: 100,
       y: 100,
@@ -5362,7 +5362,7 @@ class Angle {
 class Circle2 {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "circle",
       x: 150,
       y: 150,
@@ -5427,7 +5427,7 @@ class Circle2 {
 class Dot {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "dot",
       x: 100,
       y: 100,
@@ -5487,7 +5487,7 @@ class Dot {
 class Icon {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "icon",
       x: 100,
       y: 100,
@@ -5628,7 +5628,7 @@ function text(ctx, text2, x, y2, color = "black", font = "12px Arial", shadowOff
 let Image$1 = class Image2 {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "image",
       x: 50,
       y: 50,
@@ -5666,7 +5666,7 @@ let Image$1 = class Image2 {
 class Piechart {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "piechart",
       x: 100,
       y: 100,
@@ -5716,7 +5716,7 @@ class Piechart {
 class Ray {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "ray",
       x1: 100,
       y1: 100,
@@ -5837,7 +5837,7 @@ function drawArrowHead(ctx, x1, y1, x2, y2, arrowWidth, arrowHeight) {
 let Sprite$1 = class Sprite2 {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "sprite",
       x: 100,
       y: 100,
@@ -5908,7 +5908,7 @@ let Sprite$1 = class Sprite2 {
 class Triangle {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "triangle",
       x1: 100,
       y1: 100,
@@ -5985,7 +5985,7 @@ class Triangle {
 class Line {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "line",
       x1: 100,
       y1: 100,
@@ -6040,7 +6040,7 @@ class Line {
 class Lines {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "lines",
       x: 100,
       y: 100,
@@ -6133,7 +6133,7 @@ function isShapeClosed(lines) {
 class List {
   static data() {
     return {
-      uuid: uuid(),
+      uuid: uuid$1(),
       type: "list",
       x: 100,
       y: 100,
@@ -6811,13 +6811,73 @@ const Slide$1 = {
     "gridLineColor": "gray"
   }
 };
+function uuid() {
+  const randomHex = () => Math.floor(Math.random() * 16).toString(16);
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+    const r = randomHex();
+    const v = c === "x" ? r : r & 3 | 8;
+    return v.toString(16);
+  });
+}
+function getNewItem(itemExtra = {}, name = "", content = "") {
+  if (!name) {
+    const uuidValue = uuid();
+    const firstSegment = uuidValue.split("-")[0];
+    name = firstSegment;
+  }
+  return {
+    uuid: uuid(),
+    //added on 31-may 2024 --not used yet 
+    name,
+    content,
+    showAt: 0,
+    hideAt: null,
+    //added on 31-may 2024 --not used yet
+    itemExtra
+  };
+}
+function getNewSlide(type, slideExtra = {}) {
+  return {
+    uuid: uuid(),
+    version: "basic",
+    startTime: 0,
+    endTime: 10,
+    type,
+    template: "",
+    items: [],
+    slideExtra
+  };
+}
 class Canvas {
   static ItemsMap = Object.freeze(new Map(ItemsMap));
-  // static checkHealth(slide, fix = false) {
-  //     return canvasHealth(slide, fix);
-  // }
   static getDemoSlide() {
     return Slide$1;
+  }
+  static getDynamicDemoSlide() {
+    let xx = 10;
+    let yy = 50;
+    let dynSlide = Canvas.getNewSlide();
+    for (const itemType of ItemsMap.keys()) {
+      try {
+        const newItem = Canvas.getCanvasNewItem(itemType);
+        newItem.itemExtra.x = xx;
+        newItem.itemExtra.y = yy;
+        xx += 50;
+        yy += 4;
+        dynSlide.items.push(newItem);
+      } catch (error) {
+        console.error(`Error creating item of type ${itemType}:`, error);
+      }
+    }
+    return dynSlide;
+  }
+  static getCanvasNewItem(itemType) {
+    const newItemExtra = ItemsMap.get(itemType).data();
+    const newItem = Canvas.getNewItem(newItemExtra);
+    return newItem;
+  }
+  static getNewItem(itemExtra = {}, name = "", content = "") {
+    return getNewItem(itemExtra, name, content);
   }
   /**
    * 9-Dec-2024 the reason we need seperate newSlide for canvas and are not using the SlideObject.newSlide is that we also have to add the slideExtra of the canvas slide. The difference between 2 slide types is not only the slide.type but also slide.slideExtra.
@@ -6825,17 +6885,7 @@ class Canvas {
    */
   static getNewSlide() {
     const slideExtra = Canvas.getSlideExtra();
-    return {
-      uuid: uuid(),
-      version: "basic",
-      startTime: 0,
-      endTime: 10,
-      type: "canvas",
-      // canvas is fixed here 
-      template: "",
-      items: [],
-      slideExtra
-    };
+    return getNewSlide("canvas", slideExtra);
   }
   static getSlideExtra() {
     return {
@@ -6997,20 +7047,68 @@ const Slide = {
   "slideExtra": []
 };
 class Eqs {
-  static availableEqsSpItems() {
-    return ["code", "text", "img", "heading", "table", "tableCode"];
+  static availableEqsItems = ["hdg", "code", "txt"];
+  static availableEqsSpItems = ["code", "text", "img", "heading", "table", "tableCode"];
+  static getDynamicDemoSlide() {
+    const spLoop = () => {
+      let sp = [];
+      for (let i = 0; i < Eqs.availableEqsSpItems.length; i++) {
+        const spItemType = Eqs.availableEqsSpItems[i];
+        const spItem = Eqs.getEqsSpItem(spItemType);
+        switch (spItem.type) {
+          case "heading":
+            spItem.code = "This is a Heading";
+            break;
+          case "text":
+            spItem.code = "This is Text";
+            break;
+          case "code":
+            spItem.code = "\\sqrt{555}";
+            break;
+          case "img":
+          case "image":
+            spItem.code = "wood";
+            break;
+          case "table":
+            spItem.code = JSON.stringify([["This", "is"], ["a", "Table"]]);
+            break;
+          case "tableCode":
+            spItem.code = JSON.stringify([["\\sqrt{555}", "\\sqrt{555}"], ["\\sqrt{555}", "\\sqrt{555}"]]);
+            break;
+        }
+        sp.push(spItem);
+      }
+      return sp;
+    };
+    let dynSlide = getNewSlide("Eqs");
+    dynSlide.items[0] = Eqs.getNewItem("hdg");
+    dynSlide.items[0].itemExtra.code = "This is a Heading";
+    dynSlide.items[0].itemExtra.startTime = 0;
+    dynSlide.items[0].itemExtra.endTime = 3;
+    dynSlide.items[0].itemExtra.sp = spLoop();
+    dynSlide.items[1] = Eqs.getNewItem("code");
+    dynSlide.items[1].itemExtra.code = "\\sqrt{555}";
+    dynSlide.items[1].itemExtra.startTime = 3;
+    dynSlide.items[1].itemExtra.endTime = 6;
+    dynSlide.items[1].itemExtra.sp = spLoop();
+    dynSlide.items[2] = Eqs.getNewItem("txt");
+    dynSlide.items[2].itemExtra.code = "This is some normal text content";
+    dynSlide.items[2].itemExtra.startTime = 6;
+    dynSlide.items[2].itemExtra.endTime = 10;
+    dynSlide.items[2].itemExtra.sp = spLoop();
+    return dynSlide;
   }
   static getDemoSlide() {
     return Slide;
   }
   static getEqsSpItem(type) {
-    if (!Eqs.availableEqsSpItems().includes(type)) {
+    if (!Eqs.availableEqsSpItems.includes(type)) {
       throw new Error(`Invalid item type: ${type}`);
     }
     const EqsSpItemTypes = {
       "code": { code: "", type: "code" },
       "text": { code: "", type: "text" },
-      "img": { code: "wood", type: "image" },
+      "img": { code: "", type: "image" },
       "heading": { code: "", type: "heading" },
       "table": { code: `[["",""],["",""]]`, type: "table" },
       "tableCode": { code: `[["",""],["",""]]`, type: "tableCode" }
@@ -7021,24 +7119,20 @@ class Eqs {
     }
     return newItem;
   }
-  static availableEqsItems() {
-    return ["hdg", "code", "txt"];
-  }
-  static getNewItem() {
-    let newItem = SlideObject.getNewItem();
-    newItem.itemExtra = {
-      startTime: 0,
-      endTime: 0,
-      code: "",
-      type: "code",
-      // 'text' , 'heading'
-      sp: []
-    };
+  static getNewItem(type = "txt") {
+    const itemExtra = Eqs.getDefaultItemExtra(type);
+    const newItem = getNewItem(itemExtra);
     return newItem;
   }
-  // static checkHealth(slide, fix = false){
-  //     return eqsHealth(slide,fix);
-  // }
+  static getDefaultItemExtra(type = "txt") {
+    return {
+      "startTime": 0,
+      "endTime": 10,
+      "code": "",
+      type,
+      "sp": []
+    };
+  }
 }
 const UnknownslideTypePlayer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<h1 data-svelte-h="svelte-1ajiqwf">UnknownslideType</h1>`;
@@ -7950,21 +8044,7 @@ class SlideObject {
   //     return upgrade2Basic(slides);
   // }
   static getNewItem(itemExtra = {}, name = "", content = "") {
-    if (!name) {
-      const uuidValue = uuid();
-      const firstSegment = uuidValue.split("-")[0];
-      name = firstSegment;
-    }
-    return {
-      uuid: uuid(),
-      //added on 31-may 2024 --not used yet 
-      name,
-      content,
-      showAt: 0,
-      hideAt: null,
-      //added on 31-may 2024 --not used yet
-      itemExtra
-    };
+    return getNewItem(itemExtra, name, content);
   }
   static getNewSlide(type) {
     if (!this.availableSlideTypes().includes(type)) {
@@ -7974,23 +8054,13 @@ class SlideObject {
       return Canvas.getNewSlide();
     }
     if (type === "Eqs") {
-      let slide = SlideObject.getDefaultSlide();
-      slide.type = "Eqs";
+      let slide = getNewSlide("Eqs");
       return slide;
     }
   }
   //This has the fields required at slide level.
   static getDefaultSlide() {
-    return {
-      uuid: uuid(),
-      version: "basic",
-      startTime: 0,
-      endTime: 10,
-      type: "",
-      template: "",
-      items: [],
-      slideExtra: {}
-    };
+    return getNewSlide();
   }
   static availableSlideTypes() {
     return ["canvas", "Eqs"];
