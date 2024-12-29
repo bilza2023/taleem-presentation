@@ -1,15 +1,26 @@
 
-
+// import updateCanvas from "./updateCanvas";
+import updateEqs from "./updateEqs";
 
 
 export default async function updateSlides(slides){
 
-    for (let i = 0; i < slides.length; i++) {
-        const slide = slides[i];
-        for (let j = 0; j < slide.items.length; j++) {
-          const item = slide.items[j];
-          item.itemExtra.type = item.itemExtra.command; 
-        }
-      }
-      return slides;
+  let newSlides = [];
+
+  for (let i = 0; i < slides.length; i++) {
+
+    let slide = slides[i];
+    
+    if (slide.version === 'basic'){
+      newSlides.push( slide );
+      continue;
+    }
+    
+    if ( (slide.type).toLowerCase() === 'eqs'){
+      newSlides.push(await updateEqs(slide));
+    }
+        
+  }//the loop
+
+  return newSlides;
 }

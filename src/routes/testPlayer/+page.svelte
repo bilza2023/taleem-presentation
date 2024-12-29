@@ -4,6 +4,7 @@
     import audioData from "./audioData.js";
     import {onMount} from "svelte";
     import {updateSlides} from "$lib";
+    import {Presentation} from './presentation.js';
   ////////////////////////////////////////////
   import {db} from "./db.js";
 
@@ -13,30 +14,14 @@
     slides = [...incomming];
  }
 
- let item =null;
  let slides;
- let id; 
 
  /////////////////////////////////
 onMount(async()=>{
-
-    id = new URLSearchParams(location.search).get("id");
-    const resp = await db.tcode.getOne(id);
-
-    if (resp.ok){
-    item = await resp.json();
-    slides = item.slides;
-
-    slides = await updateSlides(slides);  
+   debugger;
+    slides = await updateSlides(Presentation.slides);  
 
     console.log("slides" , slides);
-
-    // soundFilePath =  SOUND_FILE_PATH + item.filename + '.opus'; 
-    }
-    else {
-      throw new Error('Failed to load');
-    }
-   
 });
 
 </script>

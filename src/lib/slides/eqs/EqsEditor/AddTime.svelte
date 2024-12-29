@@ -1,6 +1,8 @@
 
 <script>
     //@ts-nocheck
+    import {onMount} from 'svelte';  
+
     export let item;
     export let currentTime;
     export let isFirst;
@@ -22,6 +24,11 @@ function handleInputChange(event) {
         updateTimings();
 }
 
+  onMount(async() =>{
+        // console.log("ok");
+        // debugger;
+
+    });
 </script>
 
 
