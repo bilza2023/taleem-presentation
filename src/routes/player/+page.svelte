@@ -21,10 +21,8 @@
  }
     
     onMount(async()=>{
-        // slides = await upgrade2Basic(Slides);
-        const demoCanvasSlide = SlideObject.Canvas.getDemoSlide();
-        const demoEqSlide = SlideObject.Eqs.getDemoSlide();
-        slides = [demoCanvasSlide ,demoEqSlide ];
+      slides = SlideObject.getDynamicDemoSlide();
+     console.log("slides Player ::--->", slides);
     });
 
 

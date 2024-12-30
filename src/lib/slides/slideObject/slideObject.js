@@ -29,6 +29,17 @@ export default class SlideObject {
     //     return upgrade2Basic(slides);
     // }
 
+    static getDynamicDemoSlide() {
+        
+        const eqs = Eqs.getDynamicDemoSlide();
+            eqs.startTime = 0; eqs.endTime = 10;
+        
+        const canvas =  Canvas.getDynamicDemoSlide();
+            canvas.startTime = 10; canvas.endTime = 20;
+
+        return [eqs , canvas];
+    }
+
     static getNewItem( itemExtra = {} , name='',content='') {
       return getNewItem(itemExtra, name, content);
     }

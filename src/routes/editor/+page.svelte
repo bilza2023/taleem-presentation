@@ -24,12 +24,8 @@
     slides = [...incomming];
  }
 onMount(async()=>{
-      const s = SlideObject.Canvas.getDynamicDemoSlide();
-      s.startTime = 10; s.endTime = 20;
-      const j = SlideObject.Eqs.getDynamicDemoSlide();
-      const report = await healthCheckCanvas(s);
-      console.log('report' , report);
-      slides = [j , s];
+  slides = SlideObject.getDynamicDemoSlide();
+  console.log("slides Editor ::--->", slides);
 
 });
 
