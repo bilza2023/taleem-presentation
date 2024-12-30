@@ -30,7 +30,7 @@ static getDynamicDemoSlide(){
                     break;
                 case 'img':
                 case 'image':
-                    spItem.code = 'wood';
+                    spItem.code = 'wood.jpg';
                     break;
                 case 'table':
                     spItem.code = JSON.stringify([["This", "is"], ["a", "Table"]]); // Use JSON.stringify
