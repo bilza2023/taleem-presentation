@@ -12,6 +12,7 @@ if ( slide.version == 'basic' ) { return slide; }
 for (let j = 0; j < slide.items.length; j++) {
     const item = slide.items[j];
     if(item.extra){
+        if(item.extra.type === 'txt'){item.extra.type === 'text';}
         item.itemExtra = item.extra;      
         item.itemExtra = simplifyJSON(item.itemExtra,['sp']);
         item.extra=null;      

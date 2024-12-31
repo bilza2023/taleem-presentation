@@ -3,11 +3,11 @@
 import {Slide} from "../eqs/samples/demoSlide";
 import getNewItem from "./getNewItem";
 import getNewSlide from "./getNewSlide";
+import eqsHealth from "./eqsHealth";
 /////////////////////////////////////////////
 export default class Eqs{
 
-
-    static availableEqsItems =  ['hdg' , 'code', 'txt' ];
+    static availableEqsItems =  ['hdg' , 'code', 'txt','text' ];
     static availableEqsSpItems =['code' , 'text', 'img' , 'heading' , 'table' , 'tableCode' ];
 
 static getDynamicDemoSlide(){
@@ -64,6 +64,10 @@ static getDynamicDemoSlide(){
         dynSlide.items[2].itemExtra.endTime = 10;
         dynSlide.items[2].itemExtra.sp = spLoop();
     return dynSlide;
+}
+
+static async healthCheck(eqSlide,fix = false , config = { checkTimings: false}){
+    return await eqsHealth(eqSlide,fix, config );
 }
 static getDemoSlide(){
     return Slide;

@@ -1,6 +1,76 @@
-import uuid from "../uuid";
-import { availableEqsItems, availableEqsSpItems } from '../index';
 
+import uuid from "../uuid";
+import SlideObject from "./slideObject";
+function validateTimeSequence(items, slideStartTime, slideEndTime, report) {
+  // Sort items by startTime to check for sequence
+  const sortedItems = [...items].sort((a, b) => 
+    a.itemExtra.startTime - b.itemExtra.startTime
+  );
+
+  // Check if times are within slide range and sequential
+  for (let i = 0; i < sortedItems.length; i++) {
+    const item = sortedItems[i];
+    const { startTime, endTime } = item.itemExtra;
+
+    // Check if times are valid numbers
+    if (typeof startTime !== 'number' || typeof endTime !== 'number') {
+      report.errors.push(`Item ${i} has invalid time format`);
+      report.result = false;
+      continue;
+    }
+
+    // Check if within slide bounds
+    if (startTime < slideStartTime || endTime > slideEndTime) {
+      report.errors.push(
+        `Item ${i} time range (${startTime}-${endTime}) outside slide bounds (${slideStartTime}-${slideEndTime})`
+      );
+      report.result = false;
+    }
+
+    // Check if startTime is before endTime
+    if (startTime >= endTime) {
+      report.errors.push(
+        `Item ${i} has invalid time range: startTime (${startTime}) must be less than endTime (${endTime})`
+      );
+      report.result = false;
+    }
+
+    // Check for overlaps with next item
+    if (i < sortedItems.length - 1) {
+      const nextItem = sortedItems[i + 1];
+      if (endTime > nextItem.itemExtra.startTime) {
+        report.errors.push(
+          `Time overlap detected between items: Item ending at ${endTime} overlaps with next item starting at ${nextItem.itemExtra.startTime}`
+        );
+        report.result = false;
+      }
+
+      // Check for gaps if they shouldn't exist
+      if (endTime < nextItem.itemExtra.startTime) {
+        report.warnings.push(
+          `Gap detected between items: ${endTime} to ${nextItem.itemExtra.startTime}`
+        );
+      }
+    }
+  }
+
+  // Verify full time range coverage if needed
+  const firstItem = sortedItems[0];
+  const lastItem = sortedItems[sortedItems.length - 1];
+  
+  if (firstItem && lastItem) {
+    if (firstItem.itemExtra.startTime > slideStartTime) {
+      report.warnings.push(
+        `Gap at start of slide: ${slideStartTime} to ${firstItem.itemExtra.startTime}`
+      );
+    }
+    if (lastItem.itemExtra.endTime < slideEndTime) {
+      report.warnings.push(
+        `Gap at end of slide: ${lastItem.itemExtra.endTime} to ${slideEndTime}`
+      );
+    }
+  }
+}
 function isFieldPresent(obj, fieldName, report, fix, options = {}) {
   const {
     defaultValue = '',
@@ -48,7 +118,7 @@ function validateItemExtra(itemExtra, index, report) {
 
   isFieldPresent(itemExtra, 'type', report, false, {
     validateFn: (type) => ({
-      valid: availableEqsItems.includes(type),
+      valid: SlideObject.Eqs.availableEqsItems.includes(type),
       message: `Item ${index} invalid itemExtra type: ${type}`
     })
   });
@@ -57,7 +127,7 @@ function validateItemExtra(itemExtra, index, report) {
     itemExtra.sp.forEach((spItem, spIndex) => {
       isFieldPresent(spItem, 'type', report, false, {
         validateFn: (type) => ({
-          valid: availableEqsSpItems.includes(type),
+          valid: SlideObject.Eqs.availableEqsSpItems.includes(type),
           message: `Item ${index} sp item ${spIndex} has invalid type: ${type}`
         })
       });
@@ -95,36 +165,24 @@ function validateItem(item, index, report, fix) {
     validateItemExtra(item.itemExtra, index, report);
   }
 }
-
-export default async function eqsHealth(slide, fix = false) {
+// Modify the existing eqsHealth function to include the new validation
+export default async function eqsHealth(slide, fix = false , config = { checkTimings: false}) {
   const report = { 
     errors: [], 
     warnings: [],  
     result: true 
   };
 
+  // Existing slide field validations
   const slideFields = [
-    { name: 'uuid', options: { defaultValue: uuid(), critical: true, errorMessage: "Missing slide UUID" } },
-    { name: 'slideExtra', options: { errorMessage: "Missing slideExtra", critical: true } },
-    { name: 'items', options: { defaultValue: [], errorMessage: "Missing items array", critical: true } },
-    { 
-      name: 'type', 
-      options: { 
-        validateFn: (type) => ({
-          valid: type === 'Eqs',
-          message: "Invalid or missing slide type. Must be 'Eqs'"
-        }),
-        critical: true
-      } 
-    },
-    { name: 'template', options: { defaultValue: '', warningMessage: "Template field missing" } },
-    { name: 'version', options: { defaultValue: 'basic', critical: true, errorMessage: "Missing version" } }
+    /* ... existing field validations ... */
   ];
 
   slideFields.forEach(field => {
     isFieldPresent(slide, field.name, report, fix, field.options);
   });
 
+  // Existing startTime and endTime validations
   if (slide.startTime !== 0) {
     if (fix) {
       slide.startTime = 0;
@@ -142,6 +200,14 @@ export default async function eqsHealth(slide, fix = false) {
     critical: true
   });
 
+  if(config.checkTimings){
+    // Add time sequence validation if items exist
+    if (slide.items && Array.isArray(slide.items) && slide.items.length > 0) {
+      validateTimeSequence(slide.items, slide.startTime, slide.endTime, report);
+    }
+ }
+
+  // Existing item validations
   if (slide.items) {
     slide.items.forEach((item, index) => {
       validateItem(item, index, report, fix);

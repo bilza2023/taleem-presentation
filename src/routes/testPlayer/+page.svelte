@@ -5,6 +5,8 @@
     import {onMount} from "svelte";
     import {updateSlides} from "$lib";
     import {Presentation} from './presentation.js';
+
+    import eqsHealth from "../../lib/slides/slideObject/eqsHealth.js";
   ////////////////////////////////////////////
   import {db} from "./db.js";
 
@@ -18,10 +20,11 @@
 
  /////////////////////////////////
 onMount(async()=>{
-   debugger;
     slides = await updateSlides(Presentation.slides);  
 
+    const report  = await eqsHealth(slides[0] , true, {checkTimings: false});
     console.log("slides" , slides);
+    console.log("report" , report);
 });
 
 </script>
