@@ -4,7 +4,7 @@ import Eqs from "./eqs";
 // import uuid from "./uuid";
 import getNewItem from "./getNewItem";
 import getNewSlide from "./getNewSlide";
-
+import updateSlides from "./updateSlides/updateSlides";
 import CanvasPlayer from "../canvas/CanvasPlayer/CanvasPlayer.svelte";
 import CanvasEditor from "../canvas/CanvasEditor/CanvasEditor.svelte";
 import UnknownslideTypePlayer from "../unknownSlideType/UnknownslideTypePlayer.svelte";
@@ -25,10 +25,12 @@ export default class SlideObject {
     static CanvasEditor=CanvasEditor;
     static UnknownslideTypePlayer=UnknownslideTypePlayer;
     static UnknownslideTypeEditor=UnknownslideTypeEditor;
-    // static upgrade2Basic(slides) {
-    //     return upgrade2Basic(slides);
-    // }
 
+    
+
+    static updateSlides(slides) {
+        return updateSlides(slides);
+    }
     static getDynamicDemoSlide() {
         
         const eqs = Eqs.getDynamicDemoSlide();

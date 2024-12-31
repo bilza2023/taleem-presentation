@@ -1,9 +1,8 @@
 <script>
-  import {SlideObject,healthCheckCanvas,Editor} from '$lib';
+  import {SlideObject,Editor} from '$lib';
   // 15-dec-2024 :why import Editor directy ???? is it error--> NO-18dec2024--
     import audioData from "./audioData.js";
     import {onMount} from "svelte";
-    import {updateSlides} from "$lib";
     import {Presentation} from './presentation.js';
 
     import eqsHealth from "../../lib/slides/slideObject/eqsHealth.js";
@@ -20,9 +19,9 @@
 
  /////////////////////////////////
 onMount(async()=>{
-    slides = await updateSlides(Presentation.slides);  
+    slides = await SlideObject.updateSlides(Presentation.slides);  
 
-    const report  = await eqsHealth(slides[0] , true, {checkTimings: false});
+    const report  = await SlideObject.Eqs.healthCheck(slides[0] , true, {checkTimings: false});
     console.log("slides" , slides);
     console.log("report" , report);
 });

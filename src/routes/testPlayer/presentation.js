@@ -1,102 +1,47 @@
 export const Presentation ={
   "_id": {
-    "$oid": "6646aee20f8a3c642cd26c25"
+    "$oid": "6646adffab94ee95e9450995"
   },
-  "tcode": "fbise9math",
-  "chapter": 2,
-  "exercise": "2.1",
-  "filename": "fbise9math2024_ch_2_ex_2.1_q_1",
+  "tcode": "fbise10math",
+  "chapter": 1,
+  "exercise": "1.1",
+  "filename": "fbise10math_ch_1_ex_1.1_q_1_pt_3",
   "questionNo": 1,
-  "part": 0,
+  "part": 3,
   "name": "",
   "questionType": "paid",
-  "status": "final",
+  "status": "empty",
+  "filledBy": "",
   "slides": [
     {
       "startTime": 0,
-      "endTime": 4,
-      "type": "canvas",
+      "endTime": 10,
+      "type": "HdgList",
       "template": "",
-      "items": [
+      "items": [],
+      "slideExtra": [
         {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "text": {
-              "initialValue": "Chapter 2 Ex 2.1 Q 1 Pt 1",
-              "setCommands": []
-            },
-            "x": {
-              "initialValue": 150,
-              "setCommands": []
-            },
-            "y": {
-              "initialValue": 125,
-              "setCommands": []
-            },
-            "font": "60px Arial",
-            "translate": true,
-            "command": "text",
-            "name": "Chapter",
-            "color": {
-              "initialValue": "#ff0a0a",
-              "setCommands": []
-            },
-            "hideAt": 0,
-            "showAt": 0,
-            "visibility": 0,
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "shadowOffsetX": 0,
-            "shadowOffsetY": 0,
-            "shadowColor": "#bf8a7d",
-            "shadowBlur": 0,
-            "useShowHide": false,
-            "setCommands": [],
-            "fontSize": {
-              "initialValue": "60",
-              "setCommands": []
-            }
-          },
-          "arr": [],
+          "key": "data",
+          "value": "Ch 1 Ex 1.1 Q 1 Part (iii)",
           "_id": {
-            "$oid": "666694ae95fd6942f888aa7d"
+            "$oid": "65c32b611dffe3d4aa7b2bf8"
+          }
+        },
+        {
+          "key": "rows",
+          "value": "2",
+          "_id": {
+            "$oid": "65c32b611dffe3d4aa7b2bf9"
           }
         }
       ],
-      "slideExtra": [],
-      "extra": {
-        "backgroundColor": "#efebb8",
-        "canvasWidth": 1000,
-        "canvasHeight": 360,
-        "cellHeight": 25,
-        "cellWidth": 25,
-        "bgImg": "system_images/bg_images/black_mat.jpg",
-        "bgGlobalAlpha": 1,
-        "xFactor": 0,
-        "yFactor": 0,
-        "showGrid": false,
-        "gridLineWidth": 1,
-        "gridLineColor": "gray"
-      },
       "_id": {
-        "$oid": "666694ae95fd6942f888aa7c"
+        "$oid": "65c32b611dffe3d4aa7b2bf7"
       }
     },
     {
-      "startTime": 4,
-      "endTime": 204,
+      "startTime": 10,
+      "endTime": 20,
       "type": "Eqs",
       "template": "",
       "items": [
@@ -106,36 +51,20 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 0,
-            "startTime": 4,
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "Write the following in scientific notation.",
-            "type": "hdg",
+            "code": "\\frac{x}{x+1}+\\frac{x+1}{x}=6",
+            "type": "code",
             "sp": [],
             "fs": [],
             "fsVisibility": false,
-            "spVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true
           },
           "arr": [],
           "_id": {
-            "$oid": "66445cde5ab10cdecdaa22ef"
+            "$oid": "65c32f68f81dad56497826bf"
           }
         },
         {
@@ -144,36 +73,20 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 1,
-            "startTime": 20,
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "Part 1 : 0.00053407",
-            "type": "hdg",
+            "code": "Solution",
+            "type": "code",
             "sp": [],
             "fs": [],
-            "spVisibility": false,
             "fsVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true
           },
           "arr": [],
           "_id": {
-            "$oid": "66445cde5ab10cdecdaa22f0"
+            "$oid": "65c32f68f81dad56497826c0"
           }
         },
         {
@@ -182,41 +95,20 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 2,
-            "startTime": 51,
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "0.0005 # 3407",
-            "type": "text",
-            "sp": [
-              {
-                "code": "Move the decimal towards right and put it after the first non zero number",
-                "type": "text"
-              }
-            ],
+            "code": "\\frac{x}{x+1}+\\frac{x+1}{x}=6",
+            "type": "code",
+            "sp": [],
             "fs": [],
-            "fsVisibility": false,
-            "spVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true,
+            "fsVisibility": false
           },
           "arr": [],
           "_id": {
-            "$oid": "66445cde5ab10cdecdaa22fa"
+            "$oid": "65c32f68f81dad56497826c1"
           }
         },
         {
@@ -225,45 +117,20 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 3,
-            "startTime": 77,
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "0.0005 # 3407",
-            "type": "text",
-            "sp": [
-              {
-                "code": "Count the number of digits between the original location of decimal and the new location.",
-                "type": "text"
-              },
-              {
-                "code": "In this case it is 4 towards right",
-                "type": "heading"
-              }
-            ],
+            "code": "\\frac{x^2-(x+1)(x+1)}{x(x+1)}=6",
+            "type": "code",
+            "sp": [],
             "fs": [],
-            "spVisibility": false,
             "fsVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true
           },
           "arr": [],
           "_id": {
-            "$oid": "66684f4895fd6942f888c52d"
+            "$oid": "66389306ffdf74656106aca7"
           }
         },
         {
@@ -272,36 +139,20 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 4,
-            "startTime": "123",
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "5.3407 * 10",
+            "code": "\\frac{x^2-(x^2+x+x+1)}{x(x+1)}=6",
             "type": "code",
             "sp": [],
             "fs": [],
             "fsVisibility": false,
-            "spVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true
           },
           "arr": [],
           "_id": {
-            "$oid": "66684f4895fd6942f888c52e"
+            "$oid": "66389306ffdf74656106aca8"
           }
         },
         {
@@ -310,36 +161,20 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 5,
-            "startTime": 139,
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "5.3407 * 10^4",
+            "code": "\\frac{x^2-(x^2+x+x+1)}{x^2+x}=6",
             "type": "code",
             "sp": [],
             "fs": [],
             "fsVisibility": false,
-            "spVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true
           },
           "arr": [],
           "_id": {
-            "$oid": "66684f4895fd6942f888c52f"
+            "$oid": "66389306ffdf74656106aca9"
           }
         },
         {
@@ -348,59 +183,187 @@ export const Presentation ={
           "showAt": 0,
           "extra": {
             "step": 6,
-            "startTime": 163,
+            "startTime": 0,
             "endTime": 0,
             "fsStartTime": 0,
             "fsEndTime": 0,
-            "code": "5.3407 * 10^{-4}",
+            "code": "\\frac{x^2-(x^2+2x+1)}{x^2+x}=6",
             "type": "code",
-            "sp": [
-              {
-                "code": "Why -4",
-                "type": "heading"
-              },
-              {
-                "code": "The original number was 0.xx the new number is 5.xx so when we return it to original form we need to make it smaller again hence the -4",
-                "type": "text"
-              }
-            ],
+            "sp": [],
             "fs": [],
             "fsVisibility": false,
-            "spVisibility": false,
-            "color": {
-              "initialValue": "gray",
-              "setCommands": []
-            },
-            "globalAlpha": {
-              "initialValue": 1,
-              "setCommands": []
-            },
-            "gap": {
-              "initialValue": 0,
-              "setCommands": []
-            },
-            "dash": {
-              "initialValue": 0,
-              "setCommands": []
-            }
+            "spVisibility": true
           },
           "arr": [],
           "_id": {
-            "$oid": "66684f4895fd6942f888c530"
+            "$oid": "66389306ffdf74656106acaa"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 7,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "\\frac{x^2-x^2-2x-1}{x^2+x}=6",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acab"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 8,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "\\frac{-2x-1}{x^2+x}=6",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acac"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 9,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "-2x-1=6(x^2+x)",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acad"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 10,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "-2x-1=6x^2+6x",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acae"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 11,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "-2x-1-6x^2-6x=0",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acaf"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 12,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "-1-6x^2-8x=0",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acb0"
+          }
+        },
+        {
+          "name": "",
+          "content": "",
+          "showAt": 0,
+          "extra": {
+            "step": 13,
+            "startTime": 0,
+            "endTime": 0,
+            "fsStartTime": 0,
+            "fsEndTime": 0,
+            "code": "as b\\cancel{=}0, so the quadratics equation is not pure.",
+            "type": "code",
+            "sp": [],
+            "fs": [],
+            "fsVisibility": false,
+            "spVisibility": true
+          },
+          "arr": [],
+          "_id": {
+            "$oid": "66389306ffdf74656106acb1"
           }
         }
       ],
       "slideExtra": [],
       "_id": {
-        "$oid": "66445cde5ab10cdecdaa22ed"
+        "$oid": "65c32f68f81dad56497826bd"
       }
     }
   ],
   "tags": [],
-  "sortOrder": 1,
+  "sortOrder": 0,
   "teacherComments": "",
-  "adminComments": "fixed",
+  "adminComments": "",
   "__v": 0,
-  "soundFileType": "mp3",
-  "version": "0.1"
+  "soundFileType": "mp3"
 }
