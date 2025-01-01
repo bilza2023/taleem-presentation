@@ -1,5 +1,5 @@
 <script>
-  import {SlideObject,healthCheckCanvas,Editor} from '$lib';
+  import {SlideObject,Editor} from '$lib';
   // 15-dec-2024 :why import Editor directy ???? is it error--> NO-18dec2024--
     import audioData from "./audioData.js";
     import {onMount} from "svelte";
