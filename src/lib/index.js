@@ -5,7 +5,6 @@ import Player from './presentation/players/Player.svelte';
 import SlideObject from "./slides/slideObject/slideObject";
 import ItemsMap from "./slides/canvas/staticItems/ItemsMap";
 
-
 import {
         CanvasEditor,
         CanvasPlayer,

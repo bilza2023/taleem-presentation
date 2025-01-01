@@ -8,11 +8,41 @@
       "_internal.js"
     ]
   },
+  "_Editor.js": {
+    "file": "chunks/Editor.js",
+    "name": "Editor",
+    "imports": [
+      "_ssr.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
+      "_client.js"
+    ]
+  },
   "_OpenFileButton.js": {
     "file": "chunks/OpenFileButton.js",
     "name": "OpenFileButton",
     "imports": [
       "_ssr.js"
+    ]
+  },
+  "_Player.js": {
+    "file": "chunks/Player.js",
+    "name": "Player",
+    "imports": [
+      "_ssr.js",
+      "_client.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js"
+    ]
+  },
+  "_PlayerToolbar.svelte_svelte_type_style_lang.js": {
+    "file": "chunks/PlayerToolbar.svelte_svelte_type_style_lang.js",
+    "name": "PlayerToolbar.svelte_svelte_type_style_lang",
+    "imports": [
+      "_ssr.js",
+      "_index.js",
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PlayerToolbar.DQOHpwVe.css"
     ]
   },
   "_client.js": {
@@ -38,18 +68,6 @@
     "name": "internal",
     "imports": [
       "_ssr.js"
-    ]
-  },
-  "_slideObject.js": {
-    "file": "chunks/slideObject.js",
-    "name": "slideObject",
-    "imports": [
-      "_ssr.js",
-      "_index.js",
-      "_client.js"
-    ],
-    "css": [
-      "_app/immutable/assets/slideObject.BIRMvm46.css"
     ]
   },
   "_ssr.js": {
@@ -102,7 +120,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
       "_client.js"
     ]
   },
@@ -113,7 +131,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
       "_client.js"
     ]
   },
@@ -124,9 +142,22 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
+      "_Editor.js",
       "_client.js",
       "_OpenFileButton.js"
+    ]
+  },
+  "src/routes/editorDemo/+page.svelte": {
+    "file": "entries/pages/editorDemo/_page.svelte.js",
+    "name": "entries/pages/editorDemo/_page.svelte",
+    "src": "src/routes/editorDemo/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
+      "_Editor.js",
+      "_client.js"
     ]
   },
   "src/routes/eqEditor/+page.svelte": {
@@ -136,7 +167,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
       "_client.js"
     ]
   },
@@ -147,7 +178,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
       "_client.js"
     ]
   },
@@ -158,9 +189,20 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
-      "_client.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
+      "_Player.js",
       "_OpenFileButton.js"
+    ]
+  },
+  "src/routes/playerDemo/+page.svelte": {
+    "file": "entries/pages/playerDemo/_page.svelte.js",
+    "name": "entries/pages/playerDemo/_page.svelte",
+    "src": "src/routes/playerDemo/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
+      "_Player.js"
     ]
   },
   "src/routes/testPlayer/+page.svelte": {
@@ -170,7 +212,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_slideObject.js",
+      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
       "_client.js",
       "_index.js"
     ],

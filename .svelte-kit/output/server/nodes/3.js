@@ -3,6 +3,6 @@
 export const index = 3;
 let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/canvasEditor/_page.svelte.js')).default;
-export const imports = ["_app/immutable/nodes/3.CBbQv4YS.js","_app/immutable/chunks/scheduler.Dc8tTJBu.js","_app/immutable/chunks/index.CUkUO2Ml.js","_app/immutable/chunks/slideObject.CxZRYBWd.js","_app/immutable/chunks/entry.T0cHvrkw.js","_app/immutable/chunks/OpenFileButton.DpYLMTcY.js","_app/immutable/chunks/SaveFileButton.C-aOrtSI.js"];
-export const stylesheets = ["_app/immutable/assets/slideObject.BIRMvm46.css"];
+export const imports = ["_app/immutable/nodes/3.DYspdZqp.js","_app/immutable/chunks/scheduler.9Q9YTp9e.js","_app/immutable/chunks/index.C1dxgIUi.js","_app/immutable/chunks/PlayerToolbar.svelte_svelte_type_style_lang.CCg4188F.js","_app/immutable/chunks/entry.BCBYxT0_.js","_app/immutable/chunks/OpenFileButton.BWj8Grwl.js","_app/immutable/chunks/SaveFileButton.CWD3JqbW.js"];
+export const stylesheets = ["_app/immutable/assets/PlayerToolbar.DQOHpwVe.css"];
 export const fonts = [];
