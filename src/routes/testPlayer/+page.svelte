@@ -5,7 +5,6 @@
     import {onMount} from "svelte";
     import {Presentation} from './presentation.js';
 
-    import eqsHealth from "../../lib/slides/slideObject/eqsHealth.js";
   ////////////////////////////////////////////
   import {db} from "./db.js";
 
