@@ -25,6 +25,7 @@ export default class SlideRegistry {
     }
 
     getEditorComponent(type) {
+      
         return this.slideTypes.get(type)?.EditorComponent;
     }
 }

@@ -63,7 +63,7 @@ for (let i = 0; i < currentSlide.items.length; i++) {
   {#if currentSlide && ready}
       <!-- svelte-ignore missing-declaration -->
       <svelte:component 
-          this={registry.getEditorComponent(currentSlide.type)}
+          this={registry.getEditorComponent((currentSlide.type).toLowerCase())}
                    
           {currentSlide}
           bind:items={currentSlide.items}

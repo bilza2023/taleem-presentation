@@ -3,22 +3,20 @@
   // 15-dec-2024 :why import Editor directy ???? is it error--> NO-18dec2024--
     import audioData from "./audioData.js";
     import {onMount} from "svelte";
-  ////////////////////////////////////////////
+    import {Presentation} from './presentation.js';
+    import updateBareMinimum from "./updateBareMinimum.js"
+    ////////////////////////////////////////////
   
     let slides;
     let showToolbar=true;
 
-  function newPresentation(){
-    slides = [];
-  }  
 
-  function callback(incomming){
-    // IMPORTANT DO NOT IMPORT SLIDE SINCE THAT IS OBJECT WE NEED ARRAY HERE
-  //there is difference between slides = [incomming]; and slides = [...incomming];
-    slides = [...incomming];
- }
 onMount(async()=>{
-  slides = SlideObject.getDynamicDemoSlide();
+  // slides = SlideObject.getDynamicDemoSlide();
+  
+  slides = Presentation.slides;
+
+  // slides = await updateBareMinimum(slidesinit); 
   console.log("slides Editor ::--->", slides);
 
 });
