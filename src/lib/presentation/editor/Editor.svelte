@@ -199,6 +199,11 @@
     slides = slides;
     ready = true;
   });
+
+  $:{
+    slides;
+    // debugger;
+  }
 </script>
 
 <div class="bg-gray-800 overflow-x-auto w-full text-white min-h-screen">

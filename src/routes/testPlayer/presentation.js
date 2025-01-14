@@ -1,369 +1,141 @@
-export const Presentation ={
+export const Presentation = {
   "_id": {
-    "$oid": "6646adffab94ee95e9450995"
+    "$oid": "6779fd8c808e55c288cb54c3"
   },
-  "tcode": "fbise10math",
+  "tcode": "fbise9math",
   "chapter": 1,
-  "exercise": "1.1",
-  "filename": "fbise10math_ch_1_ex_1.1_q_1_pt_3",
+  "exercise": "1.3",
+  "filename": "fbise9math2024_ch_1_ex_1.3_q_1",
   "questionNo": 1,
-  "part": 3,
+  "part": 0,
   "name": "",
   "questionType": "paid",
-  "status": "empty",
-  "filledBy": "",
+  "status": "final",
   "slides": [
     {
+      "uuid": "b59b6ea6-bcd3-4905-8ad2-bdc91a0bd4f4",
       "startTime": 0,
       "endTime": 10,
-      "type": "HdgList",
-      "template": "",
-      "items": [],
-      "slideExtra": [
-        {
-          "key": "data",
-          "value": "Ch 1 Ex 1.1 Q 1 Part (iii)",
-          "_id": {
-            "$oid": "65c32b611dffe3d4aa7b2bf8"
-          }
-        },
-        {
-          "key": "rows",
-          "value": "2",
-          "_id": {
-            "$oid": "65c32b611dffe3d4aa7b2bf9"
-          }
-        }
-      ],
-      "_id": {
-        "$oid": "65c32b611dffe3d4aa7b2bf7"
-      }
-    },
-    {
-      "startTime": 10,
-      "endTime": 20,
-      "type": "Eqs",
+      "type": "eqs",
+      "version": "basic",
       "template": "",
       "items": [
         {
-          "name": "",
+          "uuid": "5715980a-50d3-42d8-811e-2127222c52f7",
+          "name": "92c89e32",
           "content": "",
           "showAt": 0,
-          "extra": {
-            "step": 0,
+          "hideAt": null,
+          "itemExtra": {
             "startTime": 0,
             "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x}{x+1}+\\frac{x+1}{x}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
+            "code": "On his last bank statement Qasim had a balance of Rs 175,00 in his checking account .He wrote one chque for Rs 45,790 and another for Rs 112,921.What is his current balance.",
+            "type": "txt",
+            "sp": []
           },
-          "arr": [],
           "_id": {
-            "$oid": "65c32f68f81dad56497826bf"
+            "$oid": "677cc11a3cc9ccd50a8d67ef"
           }
         },
         {
-          "name": "",
+          "uuid": "466c0e04-dd00-4168-8803-abe9551fe733",
+          "name": "0d7d87e4",
           "content": "",
           "showAt": 0,
-          "extra": {
-            "step": 1,
+          "hideAt": null,
+          "itemExtra": {
             "startTime": 0,
             "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "Solution",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
+            "code": "Previous balance =175,000Rs",
+            "type": "txt",
+            "sp": []
           },
-          "arr": [],
           "_id": {
-            "$oid": "65c32f68f81dad56497826c0"
+            "$oid": "677cc11a3cc9ccd50a8d67f0"
           }
         },
         {
-          "name": "",
+          "uuid": "ef314ad4-b8ba-4092-b50d-42f76c1c1d2c",
+          "name": "7e412b26",
           "content": "",
           "showAt": 0,
-          "extra": {
-            "step": 2,
+          "hideAt": null,
+          "itemExtra": {
             "startTime": 0,
             "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x}{x+1}+\\frac{x+1}{x}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "spVisibility": true,
-            "fsVisibility": false
+            "code": "Amount drawn (cheque)=45,790+112,921",
+            "type": "txt",
+            "sp": []
           },
-          "arr": [],
           "_id": {
-            "$oid": "65c32f68f81dad56497826c1"
+            "$oid": "677cc11a3cc9ccd50a8d67f1"
           }
         },
         {
-          "name": "",
+          "uuid": "226d9383-261e-4028-a137-c3595f8c88d7",
+          "name": "85707990",
           "content": "",
           "showAt": 0,
-          "extra": {
-            "step": 3,
+          "hideAt": null,
+          "itemExtra": {
             "startTime": 0,
             "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x^2-(x+1)(x+1)}{x(x+1)}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
+            "code": "=158,711",
+            "type": "txt",
+            "sp": []
           },
-          "arr": [],
           "_id": {
-            "$oid": "66389306ffdf74656106aca7"
+            "$oid": "677cc11a3cc9ccd50a8d67f2"
           }
         },
         {
-          "name": "",
+          "uuid": "b3332cec-4c2d-4d42-89db-443fa0c9982e",
+          "name": "cc2d68ce",
           "content": "",
           "showAt": 0,
-          "extra": {
-            "step": 4,
+          "hideAt": null,
+          "itemExtra": {
             "startTime": 0,
             "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x^2-(x^2+x+x+1)}{x(x+1)}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
+            "code": "Current balance=175,000-158711=",
+            "type": "txt",
+            "sp": []
           },
-          "arr": [],
           "_id": {
-            "$oid": "66389306ffdf74656106aca8"
+            "$oid": "677cc11a3cc9ccd50a8d67f3"
           }
         },
         {
-          "name": "",
+          "uuid": "734fff4c-10e6-4bff-8418-e4060a8d93d9",
+          "name": "ae26edda",
           "content": "",
           "showAt": 0,
-          "extra": {
-            "step": 5,
+          "hideAt": null,
+          "itemExtra": {
             "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x^2-(x^2+x+x+1)}{x^2+x}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
+            "endTime": 10,
+            "code": "Current balance=16,289Rs",
+            "type": "txt",
+            "sp": []
           },
-          "arr": [],
           "_id": {
-            "$oid": "66389306ffdf74656106aca9"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 6,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x^2-(x^2+2x+1)}{x^2+x}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acaa"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 7,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{x^2-x^2-2x-1}{x^2+x}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acab"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 8,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "\\frac{-2x-1}{x^2+x}=6",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acac"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 9,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "-2x-1=6(x^2+x)",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acad"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 10,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "-2x-1=6x^2+6x",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acae"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 11,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "-2x-1-6x^2-6x=0",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acaf"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 12,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "-1-6x^2-8x=0",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acb0"
-          }
-        },
-        {
-          "name": "",
-          "content": "",
-          "showAt": 0,
-          "extra": {
-            "step": 13,
-            "startTime": 0,
-            "endTime": 0,
-            "fsStartTime": 0,
-            "fsEndTime": 0,
-            "code": "as b\\cancel{=}0, so the quadratics equation is not pure.",
-            "type": "code",
-            "sp": [],
-            "fs": [],
-            "fsVisibility": false,
-            "spVisibility": true
-          },
-          "arr": [],
-          "_id": {
-            "$oid": "66389306ffdf74656106acb1"
+            "$oid": "677cc11a3cc9ccd50a8d67f4"
           }
         }
       ],
-      "slideExtra": [],
+      "slideExtra": {
+        "imagesUrl": "https://taleem-media.blr1.cdn.digitaloceanspaces.com/bucket/"
+      },
       "_id": {
-        "$oid": "65c32f68f81dad56497826bd"
+        "$oid": "677cc11a3cc9ccd50a8d67ee"
       }
     }
   ],
   "tags": [],
   "sortOrder": 0,
-  "teacherComments": "",
-  "adminComments": "",
+  "comments": "",
   "__v": 0,
-  "soundFileType": "mp3"
+  "adminComments": "",
+  "soundFileType": "opus",
+  "teacherComments": ""
 }

@@ -19,6 +19,7 @@ export let slideEndTime;
 
 $:{
   items;
+  // debugger;
   updateTimings();
 }
 // export let slideExtra; // slideExtra is not used in Eqs but it is available 
