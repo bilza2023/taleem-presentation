@@ -56,6 +56,7 @@ let presentationObj;
 onMount(async ()=>{  
     presentationObj = new PresentationObj(slides,audioData,isBlob);
     await presentationObj.init();
+    // debugger;
 });
 </script>
 

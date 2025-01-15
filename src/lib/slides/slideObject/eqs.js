@@ -43,7 +43,7 @@ static getDynamicDemoSlide(){
         }
         return sp;
     };
-    let dynSlide = getNewSlide('Eqs');
+    let dynSlide = getNewSlide('eqs');
 ///////////////////////
         dynSlide.items[0] = Eqs.getNewItem( 'hdg' );
         dynSlide.items[0].itemExtra.code = 'This is a Heading';

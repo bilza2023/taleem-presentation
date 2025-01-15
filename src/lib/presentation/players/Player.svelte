@@ -21,6 +21,7 @@
 /////////////////////////////////////////////////
   onMount(async()=>{
        assets =  await Taleem.loadAssets();
+      //  debugger;
   }); 
   </script>
   
