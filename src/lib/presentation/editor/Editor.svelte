@@ -122,9 +122,10 @@
     }
   }
   // Slide operations
-  function handleAddNew(slideType) {
+  function addNew(slideType) {
     try {
-      // debugger;
+      if(slideType === 'Eqs'){slideType='eqs';}
+
       const newSlide = SlideObject.getNewSlide(slideType);
       setNewSlideTimings(newSlide); //setNewSlideTimings
       slides = [...slides, newSlide];
@@ -148,7 +149,7 @@
     }
   }
 
-  function handleDeleteSlide() {
+  function deleteSlideFn() {
     try {
       const { slides: updatedSlides, newIndex } = deleteSlide(slides, currentSlideIndex);
       slides = updatedSlides;
@@ -158,7 +159,7 @@
     }
   }
 
-  function handleCopySlide() {
+  function copySlideFn() {
     try {
       if (currentSlide && copySlide(currentSlide)) {
         // Optionally show success message
@@ -169,7 +170,7 @@
     }
   }
 
-  function handlePasteSlide() {
+  function pasteSlideFn() {
     try {
       const result = pasteSlide(slides);
       if (result.success) {
@@ -181,7 +182,7 @@
     }
   }
 
-  function handleCloneSlide() {
+  function cloneSlideFn() {
     try {
       const result = cloneSlide(currentSlide, slides);
       if (result.success) {
@@ -215,10 +216,12 @@
       bind:show
       bind:showSidePanel
       bind:currentTime={currentTime}
-      {currentSlideIndex}saveDeleteSlide}
-      copySlide={handleCopySlide}
-      pasteSlide={handlePasteSlide}
-      cloneSlide={handleCloneSlide}
+      {currentSlideIndex}
+      {addNew}
+      deleteSlide ={deleteSlideFn}
+      copySlide={copySlideFn}
+      pasteSlide={pasteSlideFn}
+      cloneSlide={cloneSlideFn}
       soundFile={audioData}
       {isBlob}
       {setCurrentSlideIndex}

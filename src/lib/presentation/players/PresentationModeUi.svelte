@@ -86,8 +86,9 @@ function handleClick() {
 <div on:keyup={handleKeyUp} on:click={handleClick} tabindex="0">
   {#if currentSlide && ready}
       <!-- svelte-ignore missing-declaration -->
+       <!-- if we remove .toLowerCase() it creates a big mess since many slide.type === Eqs and not eqs -->
       <svelte:component 
-          this={registry.getPlayerComponent(currentSlide.type)}
+          this={registry.getPlayerComponent((currentSlide.type).toLowerCase())}
           
           {currentTime}
           {pulse}

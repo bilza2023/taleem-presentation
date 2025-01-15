@@ -2,7 +2,7 @@
 
 `Taleem Presentation` is a library for creating `simple animated slides` and presentations for students, educators etc.
 
-<span style="color: red;">**21-Dec-2024 =>  At the moment we are at version 0.5.X which is just suitable for testing and playing but not suitable for serious projects. Also the complete code of the library is not uploaded yet. Docs and Help files are being written. Examples are being written and THE CODE IS NOT FINALLY TESTED. Expected stable release (v1.0): February 2025.**</span>
+<span style="color: red;">**15-Jan-2025 =>  At the moment we are at version 0.8.X which is just suitable for testing and playing but not suitable for serious projects. Also the complete code of the library is not uploaded yet. Docs and Help files are being written. Examples are being written and THE CODE IS NOT FINALLY TESTED. Expected stable release (v1.0): by February 2025.**</span>
 
 taleem-presentation library is hosted at https://taleem.vercel.app/:
 
@@ -22,7 +22,7 @@ taleem-presentation library is hosted at https://taleem.vercel.app/:
     
     3. The library exports 2 main components `Editor` and `Player`. The `Editor` is for editing presentations and the `Player` is for playing the presentations.
 
-    4. The main concept is that we create slides (currently we have Canvas and Eqs slide types). Once the slides are created we give them startTime and endTime respectively such that they run one after another in sequence.
+    4. The main concept is that we create slides (currently we have `Canvas` and `Eqs` slide types). Once the slides are created we give them startTime and endTime respectively such that they run one after another in sequence.
 
     5: Canvas slides allow creating drawing canvas with shapes, images, sprites and built-in assets. Eqs slides are designed for educational content with equations, text, and timed reveals.
 
@@ -37,7 +37,7 @@ taleem-presentation library is hosted at https://taleem.vercel.app/:
 
     9: I intend to create a small youtube video series on this library after i have reached version # 1
 
-    10: TaleemPresentation is a lightweight Svelte-based library designed to create and run simple JavaScript/JSON-based presentations.
+    10: Taleem-Presentation is a lightweight Svelte-based library designed to create and run simple JavaScript/JSON-based presentations.
 
 ---
 
@@ -68,7 +68,7 @@ npm i taleem-presentation
 ## Usage
 
 ### 1. Using the `Editor` Component
-The `Editor` component allows users to create or edit slides interactively. It binds to `items` and `slideExtra` properties, enabling dynamic updates.
+The `Editor` component allows users to create or edit slides interactively.The user can just use the online Editor (link is given above).
 
 #### Example:
 ```svelte
@@ -104,7 +104,7 @@ The `Player` component displays slides interactively. It supports various events
 ```svelte
 
 <script>
-    import {Player} from '$lib';
+    import {Player} from 'taleem-presentation';
     import {Slides} from "./Slides";
 // Replace Slides with your own slides.
 let slides = Slides;
@@ -124,7 +124,7 @@ let slides = Slides;
     </div>
   {/if}
 </div>
-
+    
 ```
 
 #### Props:
