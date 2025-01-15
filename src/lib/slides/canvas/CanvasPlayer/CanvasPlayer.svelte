@@ -68,7 +68,7 @@ $:{ //this is only for loading images
       }
   
       clear(slideExtra.backgroundColor);
-  
+  // debugger;
       if(slideExtra.bgImg !== "null") {
         for (let i = 0; i < assets.bgImages.length; i++) {
           const element = assets.bgImages[i];

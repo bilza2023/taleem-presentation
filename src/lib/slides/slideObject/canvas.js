@@ -60,7 +60,7 @@ export default class Canvas {
             canvasHeight : 360,
             cellHeight : 25,
             cellWidth : 25,
-            bgImg : 'system_images/bg_images/black_mat.jpg',
+            bgImg : 'black_mat',
             bgGlobalAlpha : 1,
             xFactor : 0,
             yFactor : 0,

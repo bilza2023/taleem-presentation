@@ -105,21 +105,21 @@
                   <select  class="bg-gray-900 text-white p-1" bind:value={extra.bgImg} >
                       <!-- do not change the sequence since it is based on index of array -->
                       <option value="null">None</option>
-                      <option value="system_images/bg_images/paper01.jpg">paper01</option>
-                      <option value="system_images/bg_images/drywall.jpg">drywall</option>
-                      <option value="system_images/bg_images/black_board.jpg">black-board</option>
-                      <option value="system_images/bg_images/black_board_mat.jpg">black-board-mat</option>
-                      <option value="system_images/bg_images/wood.jpg">wood</option>
-                      <option value="system_images/bg_images/tinted.jpg">tinted</option>
-                      <option value="system_images/bg_images/black_mat.jpg">Black-Mat</option>
-                      <option value="system_images/bg_images/white_mat.jpg">White-Mat</option>
-                      <option value="system_images/bg_images/granite.jpg">granite</option>
-                      <option value="system_images/bg_images/gray_marble.jpg">gray-marble</option>
-                      <option value="system_images/bg_images/brown_stone.jpg">brown-stone</option>
-                      <option value="system_images/bg_images/gray_stone.jpg">gray-stone</option>
-                      <option value="system_images/bg_images/design_old.jpg">design-old</option>
-                      <option value="system_images/bg_images/blue_waves.jpg">blue-waves</option>
-                      <option value="system_images/bg_images/wall.jpg">wall</option>
+                      <option value="paper01">paper01</option>
+                      <option value="drywall">drywall</option>
+                      <option value="black_board">black-board</option>
+                      <option value="black_board_mat">black-board-mat</option>
+                      <option value="wood">wood</option>
+                      <option value="tinted">tinted</option>
+                      <option value="black_mat">Black-Mat</option>
+                      <option value="white_mat">White-Mat</option>
+                      <option value="granite">granite</option>
+                      <option value="gray_marble">gray-marble</option>
+                      <option value="brown_stone">brown-stone</option>
+                      <option value="gray_stone">gray-stone</option>
+                      <option value="design_old">design-old</option>
+                      <option value="blue_waves">blue-waves</option>
+                      <option value="wall">wall</option>
                   </select>
               </td>
           </tr>
