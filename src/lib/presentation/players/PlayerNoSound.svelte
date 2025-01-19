@@ -6,8 +6,9 @@
     crossorigin="anonymous"
   />
 </svelte:head>
+
 <script>
-   import { onMount, onDestroy } from 'svelte';
+  import { onMount } from 'svelte';
   import PlayerToolbar from './PlayerToolbar.svelte';
   import PresentationModeUi from './PresentationModeUi.svelte';
   import { scale } from 'svelte/transition';
@@ -16,14 +17,15 @@
 ////////////////////====Slides Registration///////
 Taleem.registerSlideTypes();//--very important -- if removed will break the library
 /////////////////////////////////////////
-export let slides;
-export let audioData;
 
-let assets=null;
-let player;
-let pulse = 0;
-let interval;
-let showToolbarBool = false;
+  let pulse = 0;
+  let interval;
+  let showToolbarBool = false;
+  let assets=null;
+
+  export let slides;
+
+  let player;
 
   function showToolbar() {
     if (!showToolbarBool) {
@@ -58,22 +60,13 @@ let showToolbarBool = false;
     pulse = Math.floor(player.pulse());
   }
 
-  let sound = null;
   onMount(async () => {
-//  debugger;
-    sound = await Taleem.loadSoundFromUrl(audioData); // Load the sound when the component mounts
     assets =  await Taleem.loadAssets();
     await Taleem.loadAppImages(slides);
-    player = new Taleem.Player(slides, sound);
-    await player.init();
-  });
-  onDestroy(() => {
-      if (sound) {
-          sound.unload(); // Clean up Howl instance on destroy
-      }
+    player = new Taleem.PlayerNoSound(slides);
+    await player.init(); // init is required even if no sound
   });
 </script>
-
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="container" on:mousemove={showToolbar}>
@@ -81,8 +74,8 @@ let showToolbarBool = false;
     {#if showToolbarBool}
       <div
         class="toolbar"
-        in:scale="{{ duration: 300 }}"
-        out:scale="{{ duration: 300, start: 0.95 }}"
+        in:scale={{ duration: 300 }}
+        out:scale={{ duration: 300, start: 0.95 }}
       >
         <PlayerToolbar
           {player}
@@ -103,7 +96,6 @@ let showToolbarBool = false;
         currentTime={pulse}
         {pause}
         {assets}
-        {setPulse}
       />
     </div>
   {/if}

@@ -1,3 +1,11 @@
 {
-	"/": []
+	"/": [],
+	"/canvasEditor": [],
+	"/canvasPlayer": [],
+	"/editorDemo": [],
+	"/editor": [],
+	"/eqEditor": [],
+	"/eqPlayer": [],
+	"/playerDemo": [],
+	"/player": []
 }

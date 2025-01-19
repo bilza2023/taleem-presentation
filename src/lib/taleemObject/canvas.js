@@ -32,6 +32,29 @@ export default class Canvas {
     
       return dynSlide;
     }
+    static getDynamicSlide() {
+      let xx= 10; let yy=50;
+      
+      let dynSlide = Canvas.getNewSlide();
+    
+      // Iterate over the keys (itemTypes) in ItemsMap
+      for (const itemType of ItemsMap.keys()) {
+        try {
+          const newItem = Canvas.getCanvasNewItem(itemType);
+      
+          newItem.itemExtra.x = xx; newItem.itemExtra.y = yy;
+          
+          xx += 50;yy += 4;
+
+          dynSlide.items.push(newItem);
+        } catch (error) {
+          console.error(`Error creating item of type ${itemType}:`, error);
+          // Handle the error appropriately, e.g., skip the item, display a message, etc.
+        }
+      }
+    
+      return dynSlide;
+    }
     static getCanvasNewItem(itemType) {
       const newItemExtra = ItemsMap.get(itemType).data();
   

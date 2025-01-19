@@ -8,7 +8,7 @@ export default class Eqs{
     static availableEqsItems =  ['hdg' , 'code', 'txt','text' ];
     static availableEqsSpItems =['code' , 'text', 'img' , 'heading' , 'table' , 'tableCode' ];
 
-static getDynamicDemoSlide(){
+static getDynamicSlide(){
     // const spLoop = () => [...Eqs.availableEqsSpItems];
     const spLoop = () => {
         let sp = [];
