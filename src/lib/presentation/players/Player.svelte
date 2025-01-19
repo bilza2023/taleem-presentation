@@ -4,13 +4,12 @@
     import PlayerWithSound from "./PlayerWithSound.svelte";
     import PlayerNs from "./PlayerNs.svelte";
     import { onMount } from 'svelte';
-    import Taleem from "../taleemObject/Taleem";
+    import { Taleem } from "../../index";
     
   let assets = null;
     ////////////////////====Slides Registration///////
-    //--very important -- will break the library
-    import registerSlideTypes from "../../code/slideRegistery/registerSlideTypes";
-    registerSlideTypes();
+    
+    Taleem.registerSlideTypes();//--very important -- if removed will break the library
 
     /////////////////////////////////////////
     export let slides;
@@ -21,22 +20,25 @@
 /////////////////////////////////////////////////
   onMount(async()=>{
        assets =  await Taleem.loadAssets();
-      //  debugger;
+       await Taleem.loadAppImages(slides);
   }); 
   </script>
   
   {#if hasAudio && slides && assets}
+
     <PlayerWithSound 
       {slides}
       {audioData}
       {isBlob}
       {assets}
+
     />
+
   {:else}
-   {#if slides}
+
     <PlayerNs 
       {slides}
       {assets}
       />
-    {/if}
+
   {/if}

@@ -8,60 +8,9 @@
       "_internal.js"
     ]
   },
-  "_Editor.js": {
-    "file": "chunks/Editor.js",
-    "name": "Editor",
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_client.js"
-    ]
-  },
-  "_OpenFileButton.js": {
-    "file": "chunks/OpenFileButton.js",
-    "name": "OpenFileButton",
-    "imports": [
-      "_ssr.js"
-    ]
-  },
-  "_Player.js": {
-    "file": "chunks/Player.js",
-    "name": "Player",
-    "imports": [
-      "_ssr.js",
-      "_client.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js"
-    ]
-  },
-  "_PlayerToolbar.svelte_svelte_type_style_lang.js": {
-    "file": "chunks/PlayerToolbar.svelte_svelte_type_style_lang.js",
-    "name": "PlayerToolbar.svelte_svelte_type_style_lang",
-    "imports": [
-      "_ssr.js",
-      "_index.js",
-      "_client.js"
-    ],
-    "css": [
-      "_app/immutable/assets/PlayerToolbar.DQOHpwVe.css"
-    ]
-  },
-  "_client.js": {
-    "file": "chunks/client.js",
-    "name": "client",
-    "imports": [
-      "_exports.js"
-    ]
-  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports"
-  },
-  "_index.js": {
-    "file": "chunks/index.js",
-    "name": "index",
-    "imports": [
-      "_ssr.js"
-    ]
   },
   "_internal.js": {
     "file": "chunks/internal.js",
@@ -81,7 +30,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_client.js"
+      "_exports.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/layout.svelte": {
@@ -101,7 +50,7 @@
     "imports": [
       "_internal.js",
       "_exports.js",
-      "_index.js"
+      "_ssr.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -111,113 +60,6 @@
     "isEntry": true,
     "imports": [
       "_ssr.js"
-    ]
-  },
-  "src/routes/canvasEditor/+page.svelte": {
-    "file": "entries/pages/canvasEditor/_page.svelte.js",
-    "name": "entries/pages/canvasEditor/_page.svelte",
-    "src": "src/routes/canvasEditor/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_client.js"
-    ]
-  },
-  "src/routes/canvasPlayer/+page.svelte": {
-    "file": "entries/pages/canvasPlayer/_page.svelte.js",
-    "name": "entries/pages/canvasPlayer/_page.svelte",
-    "src": "src/routes/canvasPlayer/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_client.js"
-    ]
-  },
-  "src/routes/editor/+page.svelte": {
-    "file": "entries/pages/editor/_page.svelte.js",
-    "name": "entries/pages/editor/_page.svelte",
-    "src": "src/routes/editor/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_Editor.js",
-      "_client.js",
-      "_OpenFileButton.js"
-    ]
-  },
-  "src/routes/editorDemo/+page.svelte": {
-    "file": "entries/pages/editorDemo/_page.svelte.js",
-    "name": "entries/pages/editorDemo/_page.svelte",
-    "src": "src/routes/editorDemo/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_Editor.js",
-      "_client.js"
-    ]
-  },
-  "src/routes/eqEditor/+page.svelte": {
-    "file": "entries/pages/eqEditor/_page.svelte.js",
-    "name": "entries/pages/eqEditor/_page.svelte",
-    "src": "src/routes/eqEditor/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_client.js"
-    ]
-  },
-  "src/routes/eqPlayer/+page.svelte": {
-    "file": "entries/pages/eqPlayer/_page.svelte.js",
-    "name": "entries/pages/eqPlayer/_page.svelte",
-    "src": "src/routes/eqPlayer/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_client.js"
-    ]
-  },
-  "src/routes/player/+page.svelte": {
-    "file": "entries/pages/player/_page.svelte.js",
-    "name": "entries/pages/player/_page.svelte",
-    "src": "src/routes/player/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_Player.js",
-      "_OpenFileButton.js"
-    ]
-  },
-  "src/routes/playerDemo/+page.svelte": {
-    "file": "entries/pages/playerDemo/_page.svelte.js",
-    "name": "entries/pages/playerDemo/_page.svelte",
-    "src": "src/routes/playerDemo/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_Player.js"
-    ]
-  },
-  "src/routes/testPlayer/+page.svelte": {
-    "file": "entries/pages/testPlayer/_page.svelte.js",
-    "name": "entries/pages/testPlayer/_page.svelte",
-    "src": "src/routes/testPlayer/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js",
-      "_PlayerToolbar.svelte_svelte_type_style_lang.js",
-      "_client.js",
-      "_index.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.Bn1lMYWi.css"
     ]
   }
 }

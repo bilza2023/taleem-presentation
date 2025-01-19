@@ -1,18 +1,16 @@
 <script>
   import { onMount } from 'svelte';
-  import {SlideObject} from "../../slides/index";
   import Toolbar from './toolbar/Toolbar.svelte';
   import PresentationModeEditor from "./PresentationModeEditor.svelte";
-  import Taleem from "../taleemObject/Taleem";
+  import {Taleem} from "../../index";
   import {moveSlide,deleteSlide,copySlide,pasteSlide,cloneSlide} from '../../code/sliderServices';
-  import registerSlideTypes from "../../code/slideRegistery/registerSlideTypes";
+  // import registerSlideTypes from "../../taleemObject/slideRegistery/registerSlideTypes";
   import StackPanel from './StackPanel.svelte';
   import TimingErrorDiv from "./TimingErrorDiv.svelte";
   import { fade } from 'svelte/transition';
-
  
   // Initialize slide types
-  registerSlideTypes();
+  Taleem.registerSlideTypes();
 
   // Props with defaults
   export let slides;
@@ -126,7 +124,7 @@
     try {
       if(slideType === 'Eqs'){slideType='eqs';}
 
-      const newSlide = SlideObject.getNewSlide(slideType);
+      const newSlide = Taleem.Slides.getNewSlide(slideType);
       setNewSlideTimings(newSlide); //setNewSlideTimings
       slides = [...slides, newSlide];
       setCurrentSlideIndex(slides.length - 1);
@@ -197,14 +195,12 @@
   onMount(async()=>{
     // assets injected with loadAssets functions nothing else required. just call the loadAssets function and on this layer of the app you get assets bundle. 
     assets =  await Taleem.loadAssets();
+    // debugger;
     slides = slides;
+    await Taleem.loadAppImages(slides);
     ready = true;
   });
 
-  $:{
-    slides;
-    // debugger;
-  }
 </script>
 
 <div class="bg-gray-800 overflow-x-auto w-full text-white min-h-screen">
@@ -227,6 +223,7 @@
       {setCurrentSlideIndex}
       {shiftTime}
       {save}
+    
     />
   </div>
   {/if}
@@ -235,6 +232,7 @@
   {#if timingError}
   <TimingErrorDiv {timingErrorMessage}/>
   {/if}
+
 
 
   <div class="flex justify-start w-full">

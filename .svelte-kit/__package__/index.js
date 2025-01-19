@@ -1,17 +1,25 @@
 
+import Taleem from "./taleemObject/Taleem"
+import Editor from './presentation/editor/Editor.svelte';
+import Player from './presentation/players/Player.svelte';
 
-import CanvasPlayer from "./canvas/CanvasPlayer/CanvasPlayer.svelte";
-import CanvasEditor from "./canvas/CanvasEditor/CanvasEditor.svelte";
+import {
+        CanvasEditor,
+        CanvasPlayer,
+        EqPlayer,
+        EqsEditor
+        } from './slides';
 
-import EqPlayer from "./eqs/EqPlayer/EqPlayer.svelte";
-import EqsEditor from "./eqs/EqsEditor/EqsEditor.svelte";
-
-
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
 
 export {
-    CanvasPlayer,
-    CanvasEditor,
+    Taleem, 
+    Editor,
+    Player,
 
+    CanvasEditor,
+    CanvasPlayer,
     EqPlayer,
-    EqsEditor
+    EqsEditor,
 }
