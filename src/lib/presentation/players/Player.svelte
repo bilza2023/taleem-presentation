@@ -17,7 +17,6 @@
 Taleem.registerSlideTypes();//--very important -- if removed will break the library
 /////////////////////////////////////////
 export let slides;
-export let audioData;
 
 let assets=null;
 let player;
