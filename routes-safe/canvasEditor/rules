@@ -1,0 +1,13 @@
+
+
+// ellipse fill should be filled all the correct word is filled
+
+// font should not be in any itemExtra it shoul be just font size and font-fmaily
+
+// min max values of each item
+
+// do we need image with image item ??? it is just for loading image item in execution.
+
+// in image why ext??
+
+//ray instead of x0-x1 it should be x1-x2 y1-y2
