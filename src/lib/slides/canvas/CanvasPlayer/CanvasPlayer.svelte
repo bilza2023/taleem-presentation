@@ -192,9 +192,9 @@ $:{ //this is only for loading images
 }
   </script>
   
-  <div class="flex justify-center w-full">
+  <div class="container">
     <canvas
-      class="w-full m-2"
+      class="canvas-style"
       bind:this={canvas}
       width={slideExtra.canvasWidth}
       height={slideExtra.canvasHeight}
@@ -206,4 +206,18 @@ $:{ //this is only for loading images
       on:dblclick={handleDbClick}
     ></canvas>
   </div>
+  
+
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .canvas-style {
+      width: 100%;
+      margin: 0.5rem;
+    }
+  </style>
   
