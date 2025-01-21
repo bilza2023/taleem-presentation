@@ -42,9 +42,9 @@
              
           {#key slides}
               <Player
-                isBlob = {false}
-                slides={slides} 
-                audioData= "/music.opus"    
+              soundUrl = '/music.opus'
+              imagesUrl= '/images/'
+              slides={slides} 
               />
           {/key}
 

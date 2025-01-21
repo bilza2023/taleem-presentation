@@ -20,8 +20,6 @@ static Icons = Icons;
 static loadSoundFromUrl = loadSoundFromUrl;    
 static registerSlideTypes = registerSlideTypes;    
 // This line tie Taleem object to my specific taleem-media server. This should not happen but everything else is static so deal with it later.
-static imagesUrl = 'https://taleem-media.blr1.cdn.digitaloceanspaces.com/bucket/';
-static soundUrl = 'https://taleem-media.blr1.cdn.digitaloceanspaces.com/sound/';
 
 static getSampleaudioBlob(){
     return audioData;

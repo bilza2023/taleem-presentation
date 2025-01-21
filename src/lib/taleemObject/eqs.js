@@ -108,4 +108,14 @@ static getDefaultItemExtra(type="txt"){
     };
 }
 
+static getEqImages(slides){
+
+    for (let i = 0; i < slides.length; i++) {
+        // const slide = slides[i];
+        // if(slide.)
+        
+    }
 }
+
+
+}//class

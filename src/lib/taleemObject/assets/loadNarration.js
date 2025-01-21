@@ -1,12 +1,11 @@
+import { Howl } from 'howler';
 
-
-export default async function loadNarration(soundUrl, soundFileName) {
+export default async function loadNarration(soundUrl) {
     try {
-        const url = `${soundUrl}${soundFileName}`;
         return new Promise((resolve, reject) => {
             try {
                 const sound = new Howl({
-                    src: [url],
+                    src: [soundUrl],
                     volume: 1.0,
                     html5: true,
                     onload: () => {

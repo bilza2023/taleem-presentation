@@ -17,6 +17,8 @@
 Taleem.registerSlideTypes();//--very important -- if removed will break the library
 /////////////////////////////////////////
 export let slides;
+export let soundUrl=null;
+export let imagesUrl=null;
 
 let assets=null;
 let player;
@@ -60,17 +62,11 @@ let showToolbarBool = false;
   let sound = null;
   onMount(async () => {
 
-    // sound = await Taleem.loadSoundFromUrl(audioData); // Load the sound when the component mounts
-    
-    assets =  await Taleem.loadAssets(slides,
-      'https://taleem-media.blr1.cdn.digitaloceanspaces.com/bucket/',
-      'https://taleem-media.blr1.cdn.digitaloceanspaces.com/sound/',
-      'fbise9english_ch_1_ex_1_q_1_n_what_is_an_atom.opus'
-    );
-    sound = assets.narration;
-    // await Taleem.loadAppImages(slides);
-    player = new Taleem.Player(slides, sound);
-    await player.init();
+  assets =  await Taleem.loadAssets(slides,imagesUrl,soundUrl);
+  sound = assets.narration;
+  player = new Taleem.Player(slides, sound);
+  await player.init();
+  
   });
   onDestroy(() => {
       if (sound) {
