@@ -1,78 +1,459 @@
 {
   ".svelte-kit/generated/client-optimized/app.js": {
-    "file": "_app/immutable/entry/app.CYW8MIto.js",
+    "file": "_app/immutable/entry/app.BySli82W.js",
     "name": "entry/app",
     "src": ".svelte-kit/generated/client-optimized/app.js",
     "isEntry": true,
     "imports": [
-      "_scheduler.BvLojk_z.js",
-      "_index.BXnAILRk.js"
+      "_preload-helper.C1FmrZbK.js",
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/client-optimized/nodes/0.js",
       ".svelte-kit/generated/client-optimized/nodes/1.js",
-      ".svelte-kit/generated/client-optimized/nodes/2.js"
+      ".svelte-kit/generated/client-optimized/nodes/2.js",
+      ".svelte-kit/generated/client-optimized/nodes/3.js",
+      ".svelte-kit/generated/client-optimized/nodes/4.js",
+      ".svelte-kit/generated/client-optimized/nodes/5.js",
+      ".svelte-kit/generated/client-optimized/nodes/6.js",
+      ".svelte-kit/generated/client-optimized/nodes/7.js",
+      ".svelte-kit/generated/client-optimized/nodes/8.js",
+      ".svelte-kit/generated/client-optimized/nodes/9.js",
+      ".svelte-kit/generated/client-optimized/nodes/10.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/0.js": {
-    "file": "_app/immutable/nodes/0.8QhPIF2n.js",
+    "file": "_app/immutable/nodes/0.Cl2Heob8.js",
     "name": "nodes/0",
     "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_scheduler.BvLojk_z.js",
-      "_index.BXnAILRk.js"
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.4NwznhrH.js",
+    "file": "_app/immutable/nodes/1.b_1QaJ-K.js",
     "name": "nodes/1",
     "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_scheduler.BvLojk_z.js",
-      "_index.BXnAILRk.js",
-      "_entry.BBpYiepg.js"
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_entry.BMk4cUff.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/10.js": {
+    "file": "_app/immutable/nodes/10.BY3Mr0RD.js",
+    "name": "nodes/10",
+    "src": ".svelte-kit/generated/client-optimized/nodes/10.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_Player.D2yYxJt7.js",
+      "_entry.BMk4cUff.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/2.js": {
-    "file": "_app/immutable/nodes/2.Dm1aOzR6.js",
+    "file": "_app/immutable/nodes/2.sbp9Imfr.js",
     "name": "nodes/2",
     "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_scheduler.BvLojk_z.js",
-      "_index.BXnAILRk.js"
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js"
     ]
   },
-  "_entry.BBpYiepg.js": {
-    "file": "_app/immutable/chunks/entry.BBpYiepg.js",
+  ".svelte-kit/generated/client-optimized/nodes/3.js": {
+    "file": "_app/immutable/nodes/3.3SIJxC-q.js",
+    "name": "nodes/3",
+    "src": ".svelte-kit/generated/client-optimized/nodes/3.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_entry.BMk4cUff.js",
+      "_OpenFileButton.DJZ79fC6.js",
+      "_SaveFileButton.ka39i55J.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/4.js": {
+    "file": "_app/immutable/nodes/4.DHC-cGfy.js",
+    "name": "nodes/4",
+    "src": ".svelte-kit/generated/client-optimized/nodes/4.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_entry.BMk4cUff.js",
+      "_OpenFileButton.DJZ79fC6.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/5.js": {
+    "file": "_app/immutable/nodes/5.Bzufio_F.js",
+    "name": "nodes/5",
+    "src": ".svelte-kit/generated/client-optimized/nodes/5.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_Editor.Cz_aRwr5.js",
+      "_entry.BMk4cUff.js",
+      "_OpenFileButton.DJZ79fC6.js",
+      "_SaveFileButton.ka39i55J.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/6.js": {
+    "file": "_app/immutable/nodes/6.JjLQRubX.js",
+    "name": "nodes/6",
+    "src": ".svelte-kit/generated/client-optimized/nodes/6.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_Editor.Cz_aRwr5.js",
+      "_entry.BMk4cUff.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/7.js": {
+    "file": "_app/immutable/nodes/7.C1K_wpfn.js",
+    "name": "nodes/7",
+    "src": ".svelte-kit/generated/client-optimized/nodes/7.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_entry.BMk4cUff.js",
+      "_OpenFileButton.DJZ79fC6.js",
+      "_SaveFileButton.ka39i55J.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/8.js": {
+    "file": "_app/immutable/nodes/8.bIM0_wCr.js",
+    "name": "nodes/8",
+    "src": ".svelte-kit/generated/client-optimized/nodes/8.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_entry.BMk4cUff.js",
+      "_OpenFileButton.DJZ79fC6.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/9.js": {
+    "file": "_app/immutable/nodes/9.YAtgPGxA.js",
+    "name": "nodes/9",
+    "src": ".svelte-kit/generated/client-optimized/nodes/9.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_Player.D2yYxJt7.js",
+      "_entry.BMk4cUff.js",
+      "_OpenFileButton.DJZ79fC6.js"
+    ]
+  },
+  "_Editor.Cz_aRwr5.js": {
+    "file": "_app/immutable/chunks/Editor.Cz_aRwr5.js",
+    "name": "Editor",
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+      "_entry.BMk4cUff.js",
+      "_index.CXCC9ZIo.js"
+    ]
+  },
+  "_OpenFileButton.DJZ79fC6.js": {
+    "file": "_app/immutable/chunks/OpenFileButton.DJZ79fC6.js",
+    "name": "OpenFileButton",
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js"
+    ]
+  },
+  "_Player.D2yYxJt7.js": {
+    "file": "_app/immutable/chunks/Player.D2yYxJt7.js",
+    "name": "Player",
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_entry.BMk4cUff.js",
+      "_index.CXCC9ZIo.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js"
+    ]
+  },
+  "_PlayerNoSound.svelte_svelte_type_style_lang.!~{00g}~.js": {
+    "file": "_app/immutable/assets/PlayerNoSound.DZAQQytZ.css",
+    "src": "_PlayerNoSound.svelte_svelte_type_style_lang.!~{00g}~.js"
+  },
+  "_PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js": {
+    "file": "_app/immutable/chunks/PlayerNoSound.svelte_svelte_type_style_lang.1TsXWfQ2.js",
+    "name": "PlayerNoSound.svelte_svelte_type_style_lang",
+    "imports": [
+      "_preload-helper.C1FmrZbK.js",
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js",
+      "_entry.BMk4cUff.js"
+    ],
+    "dynamicImports": [
+      "src/lib/taleemObject/assets/bgImages/black_board.js",
+      "src/lib/taleemObject/assets/bgImages/black_board_mat.js",
+      "src/lib/taleemObject/assets/bgImages/black_mat.js",
+      "src/lib/taleemObject/assets/bgImages/blue_waves.js",
+      "src/lib/taleemObject/assets/bgImages/brown_stone.js",
+      "src/lib/taleemObject/assets/bgImages/design_old.js",
+      "src/lib/taleemObject/assets/bgImages/drywall.js",
+      "src/lib/taleemObject/assets/bgImages/granite.js",
+      "src/lib/taleemObject/assets/bgImages/gray_marble.js",
+      "src/lib/taleemObject/assets/bgImages/gray_stone.js",
+      "src/lib/taleemObject/assets/bgImages/paper01.js",
+      "src/lib/taleemObject/assets/bgImages/tinted.js",
+      "src/lib/taleemObject/assets/bgImages/wall.js",
+      "src/lib/taleemObject/assets/bgImages/white_mat.js",
+      "src/lib/taleemObject/assets/bgImages/wood.js",
+      "src/lib/taleemObject/assets/sprites/alphabets.js",
+      "src/lib/taleemObject/assets/sprites/figs.js",
+      "src/lib/taleemObject/assets/sprites/leafs.js",
+      "src/lib/taleemObject/assets/sprites/people.js",
+      "src/lib/taleemObject/assets/sprites/students.js",
+      "src/lib/taleemObject/assets/sprite/Sprite.js",
+      "src/lib/taleemObject/assets/sprite/alphabets.js",
+      "src/lib/taleemObject/assets/sprite/figs.js",
+      "src/lib/taleemObject/assets/sprite/people.js",
+      "src/lib/taleemObject/assets/sprite/students.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PlayerNoSound.DZAQQytZ.css"
+    ]
+  },
+  "_SaveFileButton.ka39i55J.js": {
+    "file": "_app/immutable/chunks/SaveFileButton.ka39i55J.js",
+    "name": "SaveFileButton",
+    "imports": [
+      "_scheduler.Zj5W8Wif.js",
+      "_index.Di1jUxA_.js"
+    ]
+  },
+  "_entry.BMk4cUff.js": {
+    "file": "_app/immutable/chunks/entry.BMk4cUff.js",
     "name": "entry",
     "imports": [
-      "_scheduler.BvLojk_z.js"
+      "_scheduler.Zj5W8Wif.js"
     ]
   },
-  "_index.BXnAILRk.js": {
-    "file": "_app/immutable/chunks/index.BXnAILRk.js",
+  "_index.CXCC9ZIo.js": {
+    "file": "_app/immutable/chunks/index.CXCC9ZIo.js",
     "name": "index",
     "imports": [
-      "_scheduler.BvLojk_z.js"
+      "_scheduler.Zj5W8Wif.js"
     ]
   },
-  "_scheduler.BvLojk_z.js": {
-    "file": "_app/immutable/chunks/scheduler.BvLojk_z.js",
+  "_index.Di1jUxA_.js": {
+    "file": "_app/immutable/chunks/index.Di1jUxA_.js",
+    "name": "index",
+    "imports": [
+      "_scheduler.Zj5W8Wif.js"
+    ]
+  },
+  "_preload-helper.C1FmrZbK.js": {
+    "file": "_app/immutable/chunks/preload-helper.C1FmrZbK.js",
+    "name": "preload-helper"
+  },
+  "_scheduler.Zj5W8Wif.js": {
+    "file": "_app/immutable/chunks/scheduler.Zj5W8Wif.js",
     "name": "scheduler"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
-    "file": "_app/immutable/entry/start.DdVk41hW.js",
+    "file": "_app/immutable/entry/start.CrLxcrbQ.js",
     "name": "entry/start",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
     "isEntry": true,
     "imports": [
-      "_entry.BBpYiepg.js"
+      "_entry.BMk4cUff.js"
     ]
+  },
+  "src/lib/taleemObject/assets/bgImages/black_board.js": {
+    "file": "_app/immutable/chunks/black_board.BrNr6iiu.js",
+    "name": "black_board",
+    "src": "src/lib/taleemObject/assets/bgImages/black_board.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/black_board_mat.js": {
+    "file": "_app/immutable/chunks/black_board_mat.C02NaDIG.js",
+    "name": "black_board_mat",
+    "src": "src/lib/taleemObject/assets/bgImages/black_board_mat.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/black_mat.js": {
+    "file": "_app/immutable/chunks/black_mat.DaWZEL4r.js",
+    "name": "black_mat",
+    "src": "src/lib/taleemObject/assets/bgImages/black_mat.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/blue_waves.js": {
+    "file": "_app/immutable/chunks/blue_waves.BWbXMIVk.js",
+    "name": "blue_waves",
+    "src": "src/lib/taleemObject/assets/bgImages/blue_waves.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/brown_stone.js": {
+    "file": "_app/immutable/chunks/brown_stone.B8ip1ksM.js",
+    "name": "brown_stone",
+    "src": "src/lib/taleemObject/assets/bgImages/brown_stone.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/design_old.js": {
+    "file": "_app/immutable/chunks/design_old.luySx-AQ.js",
+    "name": "design_old",
+    "src": "src/lib/taleemObject/assets/bgImages/design_old.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/drywall.js": {
+    "file": "_app/immutable/chunks/drywall.DSyAPUZM.js",
+    "name": "drywall",
+    "src": "src/lib/taleemObject/assets/bgImages/drywall.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/granite.js": {
+    "file": "_app/immutable/chunks/granite.D4CFiNFq.js",
+    "name": "granite",
+    "src": "src/lib/taleemObject/assets/bgImages/granite.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/gray_marble.js": {
+    "file": "_app/immutable/chunks/gray_marble.BtQWhMxO.js",
+    "name": "gray_marble",
+    "src": "src/lib/taleemObject/assets/bgImages/gray_marble.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/gray_stone.js": {
+    "file": "_app/immutable/chunks/gray_stone.SoY4on5N.js",
+    "name": "gray_stone",
+    "src": "src/lib/taleemObject/assets/bgImages/gray_stone.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/paper01.js": {
+    "file": "_app/immutable/chunks/paper01.xAxp-AnE.js",
+    "name": "paper01",
+    "src": "src/lib/taleemObject/assets/bgImages/paper01.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/tinted.js": {
+    "file": "_app/immutable/chunks/tinted.DlJmrGXh.js",
+    "name": "tinted",
+    "src": "src/lib/taleemObject/assets/bgImages/tinted.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/wall.js": {
+    "file": "_app/immutable/chunks/wall.h1q0SEx8.js",
+    "name": "wall",
+    "src": "src/lib/taleemObject/assets/bgImages/wall.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/white_mat.js": {
+    "file": "_app/immutable/chunks/white_mat.C-MTD4Od.js",
+    "name": "white_mat",
+    "src": "src/lib/taleemObject/assets/bgImages/white_mat.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/wood.js": {
+    "file": "_app/immutable/chunks/wood.0yM0dIGM.js",
+    "name": "wood",
+    "src": "src/lib/taleemObject/assets/bgImages/wood.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprite/Sprite.js": {
+    "file": "_app/immutable/chunks/Sprite.CF5C4B9H.js",
+    "name": "Sprite",
+    "src": "src/lib/taleemObject/assets/sprite/Sprite.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprite/alphabets.js": {
+    "file": "_app/immutable/chunks/alphabets.CWa4PmOO.js",
+    "name": "alphabets",
+    "src": "src/lib/taleemObject/assets/sprite/alphabets.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprite/figs.js": {
+    "file": "_app/immutable/chunks/figs.BxljV1U0.js",
+    "name": "figs",
+    "src": "src/lib/taleemObject/assets/sprite/figs.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprite/people.js": {
+    "file": "_app/immutable/chunks/people.BOExFA60.js",
+    "name": "people",
+    "src": "src/lib/taleemObject/assets/sprite/people.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprite/students.js": {
+    "file": "_app/immutable/chunks/students.ClKhRNfS.js",
+    "name": "students",
+    "src": "src/lib/taleemObject/assets/sprite/students.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprites/alphabets.js": {
+    "file": "_app/immutable/chunks/alphabets.DunidpjJ.js",
+    "name": "alphabets",
+    "src": "src/lib/taleemObject/assets/sprites/alphabets.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/figs.js": {
+    "file": "_app/immutable/chunks/figs.Csyp3WUa.js",
+    "name": "figs",
+    "src": "src/lib/taleemObject/assets/sprites/figs.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/leafs.js": {
+    "file": "_app/immutable/chunks/leafs.DzYKTzH_.js",
+    "name": "leafs",
+    "src": "src/lib/taleemObject/assets/sprites/leafs.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/people.js": {
+    "file": "_app/immutable/chunks/people.CA9R-T7p.js",
+    "name": "people",
+    "src": "src/lib/taleemObject/assets/sprites/people.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/students.js": {
+    "file": "_app/immutable/chunks/students.nJ-zGoyF.js",
+    "name": "students",
+    "src": "src/lib/taleemObject/assets/sprites/students.js",
+    "isDynamicEntry": true
   }
 }

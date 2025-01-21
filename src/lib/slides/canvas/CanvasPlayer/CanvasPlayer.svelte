@@ -92,7 +92,7 @@
         
             //very important line
             const Obj = Taleem.Slides.Canvas.ItemsMap.get(item.itemExtra.type);
-        
+            // if(item.itemExtra.type === 'image'){debugger;}
             Obj.draw(ctx,item.itemExtra,assets);
             postDraw(ctx,assets);   
         }

@@ -28,7 +28,7 @@
   <hr/>
 
 <!-- footer -->
-<div class="flex flex-wrap gap-4 bg-gray-800 text-white  p-8 text-xs">
+<!-- <div class="flex flex-wrap gap-4 bg-gray-800 text-white  p-8 text-xs">
        
 <a href="/canvasPlayer" class="block border-b border-white pb-2 ">canvasPlayer</a>
     
@@ -36,7 +36,7 @@
       
 <a href="/eqPlayer" class="block border-b border-white pb-2 ">EqPlayer </a>
       
-<a href="/eqEditor" class="block border-b border-white pb-2 ">EqEditor</a>
+<a href="/eqEditor" class="block border-b border-white pb-2 ">EqEditor</a> 
 
-</div><!--page ends-->
+ </div> -->
     

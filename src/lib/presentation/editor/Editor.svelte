@@ -193,7 +193,9 @@
   }
 
 onMount(async()=>{
-  assets =  await Taleem.loadAssets(slides,imagesUrl,soundUrl);
+  const isEditorMode = true;
+  assets = await Taleem.loadAssets(slides, imagesUrl, soundUrl, isEditorMode);
+
   ready = true;
 });
 

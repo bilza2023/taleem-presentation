@@ -8,9 +8,87 @@
       "_internal.js"
     ]
   },
+  "_Editor.js": {
+    "file": "chunks/Editor.js",
+    "name": "Editor",
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_client.js"
+    ]
+  },
+  "_OpenFileButton.js": {
+    "file": "chunks/OpenFileButton.js",
+    "name": "OpenFileButton",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_Player.js": {
+    "file": "chunks/Player.js",
+    "name": "Player",
+    "imports": [
+      "_ssr.js",
+      "_client.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js"
+    ]
+  },
+  "_PlayerNoSound.svelte_svelte_type_style_lang.js": {
+    "file": "chunks/PlayerNoSound.svelte_svelte_type_style_lang.js",
+    "name": "PlayerNoSound.svelte_svelte_type_style_lang",
+    "imports": [
+      "_ssr.js",
+      "_index.js",
+      "_client.js"
+    ],
+    "dynamicImports": [
+      "src/lib/taleemObject/assets/bgImages/black_board.js",
+      "src/lib/taleemObject/assets/bgImages/black_board_mat.js",
+      "src/lib/taleemObject/assets/bgImages/black_mat.js",
+      "src/lib/taleemObject/assets/bgImages/blue_waves.js",
+      "src/lib/taleemObject/assets/bgImages/brown_stone.js",
+      "src/lib/taleemObject/assets/bgImages/design_old.js",
+      "src/lib/taleemObject/assets/bgImages/drywall.js",
+      "src/lib/taleemObject/assets/bgImages/granite.js",
+      "src/lib/taleemObject/assets/bgImages/gray_marble.js",
+      "src/lib/taleemObject/assets/bgImages/gray_stone.js",
+      "src/lib/taleemObject/assets/bgImages/paper01.js",
+      "src/lib/taleemObject/assets/bgImages/tinted.js",
+      "src/lib/taleemObject/assets/bgImages/wall.js",
+      "src/lib/taleemObject/assets/bgImages/white_mat.js",
+      "src/lib/taleemObject/assets/bgImages/wood.js",
+      "src/lib/taleemObject/assets/sprites/alphabets.js",
+      "src/lib/taleemObject/assets/sprites/figs.js",
+      "src/lib/taleemObject/assets/sprites/leafs.js",
+      "src/lib/taleemObject/assets/sprites/people.js",
+      "src/lib/taleemObject/assets/sprites/students.js",
+      "src/lib/taleemObject/assets/sprite/Sprite.js",
+      "src/lib/taleemObject/assets/sprite/alphabets.js",
+      "src/lib/taleemObject/assets/sprite/figs.js",
+      "src/lib/taleemObject/assets/sprite/people.js",
+      "src/lib/taleemObject/assets/sprite/students.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PlayerNoSound.DZAQQytZ.css"
+    ]
+  },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "name": "client",
+    "imports": [
+      "_exports.js"
+    ]
+  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_ssr.js"
+    ]
   },
   "_internal.js": {
     "file": "chunks/internal.js",
@@ -30,7 +108,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_exports.js"
+      "_client.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/layout.svelte": {
@@ -50,8 +128,170 @@
     "imports": [
       "_internal.js",
       "_exports.js",
-      "_ssr.js"
+      "_index.js"
     ]
+  },
+  "src/lib/taleemObject/assets/bgImages/black_board.js": {
+    "file": "chunks/black_board.js",
+    "name": "black_board",
+    "src": "src/lib/taleemObject/assets/bgImages/black_board.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/black_board_mat.js": {
+    "file": "chunks/black_board_mat.js",
+    "name": "black_board_mat",
+    "src": "src/lib/taleemObject/assets/bgImages/black_board_mat.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/black_mat.js": {
+    "file": "chunks/black_mat.js",
+    "name": "black_mat",
+    "src": "src/lib/taleemObject/assets/bgImages/black_mat.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/blue_waves.js": {
+    "file": "chunks/blue_waves.js",
+    "name": "blue_waves",
+    "src": "src/lib/taleemObject/assets/bgImages/blue_waves.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/brown_stone.js": {
+    "file": "chunks/brown_stone.js",
+    "name": "brown_stone",
+    "src": "src/lib/taleemObject/assets/bgImages/brown_stone.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/design_old.js": {
+    "file": "chunks/design_old.js",
+    "name": "design_old",
+    "src": "src/lib/taleemObject/assets/bgImages/design_old.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/drywall.js": {
+    "file": "chunks/drywall.js",
+    "name": "drywall",
+    "src": "src/lib/taleemObject/assets/bgImages/drywall.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/granite.js": {
+    "file": "chunks/granite.js",
+    "name": "granite",
+    "src": "src/lib/taleemObject/assets/bgImages/granite.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/gray_marble.js": {
+    "file": "chunks/gray_marble.js",
+    "name": "gray_marble",
+    "src": "src/lib/taleemObject/assets/bgImages/gray_marble.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/gray_stone.js": {
+    "file": "chunks/gray_stone.js",
+    "name": "gray_stone",
+    "src": "src/lib/taleemObject/assets/bgImages/gray_stone.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/paper01.js": {
+    "file": "chunks/paper01.js",
+    "name": "paper01",
+    "src": "src/lib/taleemObject/assets/bgImages/paper01.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/tinted.js": {
+    "file": "chunks/tinted.js",
+    "name": "tinted",
+    "src": "src/lib/taleemObject/assets/bgImages/tinted.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/wall.js": {
+    "file": "chunks/wall.js",
+    "name": "wall",
+    "src": "src/lib/taleemObject/assets/bgImages/wall.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/white_mat.js": {
+    "file": "chunks/white_mat.js",
+    "name": "white_mat",
+    "src": "src/lib/taleemObject/assets/bgImages/white_mat.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/bgImages/wood.js": {
+    "file": "chunks/wood.js",
+    "name": "wood",
+    "src": "src/lib/taleemObject/assets/bgImages/wood.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprite/Sprite.js": {
+    "file": "chunks/Sprite.js",
+    "name": "Sprite",
+    "src": "src/lib/taleemObject/assets/sprite/Sprite.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprite/alphabets.js": {
+    "file": "chunks/alphabets2.js",
+    "name": "alphabets",
+    "src": "src/lib/taleemObject/assets/sprite/alphabets.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprite/figs.js": {
+    "file": "chunks/figs2.js",
+    "name": "figs",
+    "src": "src/lib/taleemObject/assets/sprite/figs.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprite/people.js": {
+    "file": "chunks/people2.js",
+    "name": "people",
+    "src": "src/lib/taleemObject/assets/sprite/people.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprite/students.js": {
+    "file": "chunks/students2.js",
+    "name": "students",
+    "src": "src/lib/taleemObject/assets/sprite/students.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/lib/taleemObject/assets/sprite/Sprite.js"
+    ]
+  },
+  "src/lib/taleemObject/assets/sprites/alphabets.js": {
+    "file": "chunks/alphabets.js",
+    "name": "alphabets",
+    "src": "src/lib/taleemObject/assets/sprites/alphabets.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/figs.js": {
+    "file": "chunks/figs.js",
+    "name": "figs",
+    "src": "src/lib/taleemObject/assets/sprites/figs.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/leafs.js": {
+    "file": "chunks/leafs.js",
+    "name": "leafs",
+    "src": "src/lib/taleemObject/assets/sprites/leafs.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/people.js": {
+    "file": "chunks/people.js",
+    "name": "people",
+    "src": "src/lib/taleemObject/assets/sprites/people.js",
+    "isDynamicEntry": true
+  },
+  "src/lib/taleemObject/assets/sprites/students.js": {
+    "file": "chunks/students.js",
+    "name": "students",
+    "src": "src/lib/taleemObject/assets/sprites/students.js",
+    "isDynamicEntry": true
   },
   "src/routes/+page.svelte": {
     "file": "entries/pages/_page.svelte.js",
@@ -60,6 +300,100 @@
     "isEntry": true,
     "imports": [
       "_ssr.js"
+    ]
+  },
+  "src/routes/canvasEditor/+page.svelte": {
+    "file": "entries/pages/canvasEditor/_page.svelte.js",
+    "name": "entries/pages/canvasEditor/_page.svelte",
+    "src": "src/routes/canvasEditor/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_client.js"
+    ]
+  },
+  "src/routes/canvasPlayer/+page.svelte": {
+    "file": "entries/pages/canvasPlayer/_page.svelte.js",
+    "name": "entries/pages/canvasPlayer/_page.svelte",
+    "src": "src/routes/canvasPlayer/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_client.js"
+    ]
+  },
+  "src/routes/editor/+page.svelte": {
+    "file": "entries/pages/editor/_page.svelte.js",
+    "name": "entries/pages/editor/_page.svelte",
+    "src": "src/routes/editor/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_Editor.js",
+      "_client.js",
+      "_OpenFileButton.js"
+    ]
+  },
+  "src/routes/editorDemo/+page.svelte": {
+    "file": "entries/pages/editorDemo/_page.svelte.js",
+    "name": "entries/pages/editorDemo/_page.svelte",
+    "src": "src/routes/editorDemo/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_Editor.js",
+      "_client.js"
+    ]
+  },
+  "src/routes/eqEditor/+page.svelte": {
+    "file": "entries/pages/eqEditor/_page.svelte.js",
+    "name": "entries/pages/eqEditor/_page.svelte",
+    "src": "src/routes/eqEditor/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_client.js"
+    ]
+  },
+  "src/routes/eqPlayer/+page.svelte": {
+    "file": "entries/pages/eqPlayer/_page.svelte.js",
+    "name": "entries/pages/eqPlayer/_page.svelte",
+    "src": "src/routes/eqPlayer/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_client.js"
+    ]
+  },
+  "src/routes/player/+page.svelte": {
+    "file": "entries/pages/player/_page.svelte.js",
+    "name": "entries/pages/player/_page.svelte",
+    "src": "src/routes/player/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_Player.js",
+      "_client.js",
+      "_OpenFileButton.js"
+    ]
+  },
+  "src/routes/playerDemo/+page.svelte": {
+    "file": "entries/pages/playerDemo/_page.svelte.js",
+    "name": "entries/pages/playerDemo/_page.svelte",
+    "src": "src/routes/playerDemo/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.js",
+      "_Player.js",
+      "_client.js"
     ]
   }
 }

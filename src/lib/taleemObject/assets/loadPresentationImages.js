@@ -1,39 +1,40 @@
-export default async function loadPresentationImages(imagesUrl, imageNames = ['wood.jpg']) {
+export default async function loadPresentationImages(imagesUrl, imageNames = ['wood.jpg'], isEditorMode = false) {
     if (!Array.isArray(imageNames) || typeof imagesUrl !== 'string') {
         throw new Error('Invalid arguments: imageNames must be an array, and imagesUrl must be a string.');
     }
 
-    try {
-        // Load all images concurrently
-        const imageEntries = await Promise.all(
-            imageNames.map(imageName => loadSingleImage(imageName, imagesUrl))
-        );
+    const presentationImages = new Map();
 
-        // Convert array of image entries to a Map
-        const presentationImages = new Map(imageEntries.map(({ name, img }) => [name, img]));
+    await Promise.all(
+        imageNames.map(imageName =>
+            loadSingleImage(imageName, imagesUrl, isEditorMode)
+                .then(({ name, img }) => {
+                    if (img) presentationImages.set(name, img);
+                })
+                .catch(error => {
+                    if (!isEditorMode) throw error;
+                    console.warn(`Skipping image in editor mode: ${error.message}`);
+                })
+        )
+    );
 
-        return presentationImages; // A Map with name as key and Image object as value
-    } catch (error) {
-        console.error('Error loading presentation images:', error);
-        throw error;
-    }
+    return presentationImages;
 }
 
-///////////////////////////////
-// Helper function to load a single image
-async function loadSingleImage(imageName, imagesUrl) {
+async function loadSingleImage(imageName, imagesUrl, isEditorMode) {
     return new Promise((resolve, reject) => {
         const img = new Image();
 
-        img.onload = () => resolve({
-            name: imageName,
-            img
-        });
-
-        img.onerror = () => reject(new Error(`Failed to load image: ${imagesUrl}${imageName}`));
-
+        img.onload = () => resolve({ name: imageName, img });
+        img.onerror = () => {
+            const errorMsg = `Failed to load image: ${imagesUrl}${imageName}`;
+            if (isEditorMode) {
+                console.warn(errorMsg);
+                resolve({ name: imageName, img: null });
+            } else {
+                reject(new Error(errorMsg));
+            }
+        };
         img.src = `${imagesUrl}${imageName}`;
-        // console.log(`Image ${imageName} source:`, img.src);
-
     });
 }
