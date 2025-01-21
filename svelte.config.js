@@ -4,11 +4,13 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
 	kit: {
 		adapter: adapter({
+			pages: 'public', // Output directory for pages
+			assets: 'public', // Output directory for assets
+			fallback: null, // No fallback for purely static sites
 			strict: false // Avoid errors for non-prerenderable routes
 		}),
 		prerender: {
-			// Do not include any routes in the production build
-			entries: [] // An empty array excludes all routes
+			entries: [] // Exclude all routes if needed
 		}
 	}
 };

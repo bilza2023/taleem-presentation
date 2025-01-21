@@ -1,6 +1,6 @@
 {
   ".svelte-kit/generated/client-optimized/app.js": {
-    "file": "_app/immutable/entry/app.Hw529ExO.js",
+    "file": "_app/immutable/entry/app.enduk9QL.js",
     "name": "entry/app",
     "src": ".svelte-kit/generated/client-optimized/app.js",
     "isEntry": true,
@@ -35,7 +35,7 @@
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.DBjjwwUl.js",
+    "file": "_app/immutable/nodes/1.oSWxOfrZ.js",
     "name": "nodes/1",
     "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
     "isEntry": true,
@@ -43,11 +43,11 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_entry.DW6UxNr8.js"
+      "_entry.BykdLXUG.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/10.js": {
-    "file": "_app/immutable/nodes/10.CJY7Yf1z.js",
+    "file": "_app/immutable/nodes/10.DT8adt7U.js",
     "name": "nodes/10",
     "src": ".svelte-kit/generated/client-optimized/nodes/10.js",
     "isEntry": true,
@@ -55,9 +55,9 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_Player.BbJRddQG.js",
-      "_entry.DW6UxNr8.js"
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_Player.CuuMe3rC.js",
+      "_entry.BykdLXUG.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/2.js": {
@@ -72,7 +72,7 @@
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/3.js": {
-    "file": "_app/immutable/nodes/3.CSxyrwL8.js",
+    "file": "_app/immutable/nodes/3.Bty7E4GQ.js",
     "name": "nodes/3",
     "src": ".svelte-kit/generated/client-optimized/nodes/3.js",
     "isEntry": true,
@@ -80,14 +80,14 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_entry.BykdLXUG.js",
       "_OpenFileButton.DJZ79fC6.js",
       "_SaveFileButton.ka39i55J.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/4.js": {
-    "file": "_app/immutable/nodes/4.Cq1HmXRg.js",
+    "file": "_app/immutable/nodes/4.B6aAOyzY.js",
     "name": "nodes/4",
     "src": ".svelte-kit/generated/client-optimized/nodes/4.js",
     "isEntry": true,
@@ -95,13 +95,13 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_entry.BykdLXUG.js",
       "_OpenFileButton.DJZ79fC6.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/5.js": {
-    "file": "_app/immutable/nodes/5.DNA4PLRs.js",
+    "file": "_app/immutable/nodes/5.C4sffDnB.js",
     "name": "nodes/5",
     "src": ".svelte-kit/generated/client-optimized/nodes/5.js",
     "isEntry": true,
@@ -109,15 +109,15 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_Editor.ohfZBmUo.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_Editor.Crhx-eyA.js",
+      "_entry.BykdLXUG.js",
       "_OpenFileButton.DJZ79fC6.js",
       "_SaveFileButton.ka39i55J.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/6.js": {
-    "file": "_app/immutable/nodes/6.8RSzGcFx.js",
+    "file": "_app/immutable/nodes/6.C9sy1-sT.js",
     "name": "nodes/6",
     "src": ".svelte-kit/generated/client-optimized/nodes/6.js",
     "isEntry": true,
@@ -125,13 +125,13 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_Editor.ohfZBmUo.js",
-      "_entry.DW6UxNr8.js"
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_Editor.Crhx-eyA.js",
+      "_entry.BykdLXUG.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/7.js": {
-    "file": "_app/immutable/nodes/7.C6iM7JIu.js",
+    "file": "_app/immutable/nodes/7.ChBabBUp.js",
     "name": "nodes/7",
     "src": ".svelte-kit/generated/client-optimized/nodes/7.js",
     "isEntry": true,
@@ -139,14 +139,14 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_entry.BykdLXUG.js",
       "_OpenFileButton.DJZ79fC6.js",
       "_SaveFileButton.ka39i55J.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/8.js": {
-    "file": "_app/immutable/nodes/8.Df-yobJO.js",
+    "file": "_app/immutable/nodes/8.Bzz_Rlm1.js",
     "name": "nodes/8",
     "src": ".svelte-kit/generated/client-optimized/nodes/8.js",
     "isEntry": true,
@@ -154,13 +154,13 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_entry.BykdLXUG.js",
       "_OpenFileButton.DJZ79fC6.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/9.js": {
-    "file": "_app/immutable/nodes/9.xZN0__Gg.js",
+    "file": "_app/immutable/nodes/9.Bs8ws7hn.js",
     "name": "nodes/9",
     "src": ".svelte-kit/generated/client-optimized/nodes/9.js",
     "isEntry": true,
@@ -168,20 +168,20 @@
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_Player.BbJRddQG.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_Player.CuuMe3rC.js",
+      "_entry.BykdLXUG.js",
       "_OpenFileButton.DJZ79fC6.js"
     ]
   },
-  "_Editor.ohfZBmUo.js": {
-    "file": "_app/immutable/chunks/Editor.ohfZBmUo.js",
+  "_Editor.Crhx-eyA.js": {
+    "file": "_app/immutable/chunks/Editor.Crhx-eyA.js",
     "name": "Editor",
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
-      "_entry.DW6UxNr8.js",
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
+      "_entry.BykdLXUG.js",
       "_index.CXCC9ZIo.js"
     ]
   },
@@ -193,29 +193,29 @@
       "_index.Di1jUxA_.js"
     ]
   },
-  "_Player.BbJRddQG.js": {
-    "file": "_app/immutable/chunks/Player.BbJRddQG.js",
+  "_Player.CuuMe3rC.js": {
+    "file": "_app/immutable/chunks/Player.CuuMe3rC.js",
     "name": "Player",
     "imports": [
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_entry.DW6UxNr8.js",
+      "_entry.BykdLXUG.js",
       "_index.CXCC9ZIo.js",
-      "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js"
+      "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js"
     ]
   },
   "_PlayerNoSound.svelte_svelte_type_style_lang.!~{00g}~.js": {
     "file": "_app/immutable/assets/PlayerNoSound.DZAQQytZ.css",
     "src": "_PlayerNoSound.svelte_svelte_type_style_lang.!~{00g}~.js"
   },
-  "_PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js": {
-    "file": "_app/immutable/chunks/PlayerNoSound.svelte_svelte_type_style_lang.BSiBUXtS.js",
+  "_PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js": {
+    "file": "_app/immutable/chunks/PlayerNoSound.svelte_svelte_type_style_lang.gi-smEtP.js",
     "name": "PlayerNoSound.svelte_svelte_type_style_lang",
     "imports": [
       "_preload-helper.C1FmrZbK.js",
       "_scheduler.Zj5W8Wif.js",
       "_index.Di1jUxA_.js",
-      "_entry.DW6UxNr8.js"
+      "_entry.BykdLXUG.js"
     ],
     "dynamicImports": [
       "src/lib/taleemObject/assets/bgImages/black_board.js",
@@ -256,8 +256,8 @@
       "_index.Di1jUxA_.js"
     ]
   },
-  "_entry.DW6UxNr8.js": {
-    "file": "_app/immutable/chunks/entry.DW6UxNr8.js",
+  "_entry.BykdLXUG.js": {
+    "file": "_app/immutable/chunks/entry.BykdLXUG.js",
     "name": "entry",
     "imports": [
       "_scheduler.Zj5W8Wif.js"
@@ -286,12 +286,12 @@
     "name": "scheduler"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
-    "file": "_app/immutable/entry/start.CqYJB6YJ.js",
+    "file": "_app/immutable/entry/start.D-3rGSzU.js",
     "name": "entry/start",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
     "isEntry": true,
     "imports": [
-      "_entry.DW6UxNr8.js"
+      "_entry.BykdLXUG.js"
     ]
   },
   "src/lib/taleemObject/assets/bgImages/black_board.js": {
