@@ -33,6 +33,7 @@ export default class Canvas {
       return dynSlide;
     }
     static getDynamicSlide() {
+      // debugger;
       let xx= 10; let yy=50;
       
       let dynSlide = Canvas.getNewSlide();
