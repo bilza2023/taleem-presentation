@@ -47,7 +47,8 @@ onMount(async()=>{
   <div class="w-full bg-gray-800">
   {#if slides}
     <Editor
-      isBlob={true}
+      soundUrl = '/music.opus'
+      imagesUrl= '/images/'
       {showToolbar}
       bind:slides={slides}
       {audioData}
