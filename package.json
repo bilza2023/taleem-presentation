@@ -4,17 +4,16 @@
   "private": false,
   "author": "Bilal Tariq",
   "files": [
-    "dist",
+    "build",
     "static"
   ],
   "license": "ISC",
   "type": "module",
-  "svelte": "./dist/index.js",
-  "main": "./dist/index.js",
+  "svelte": "./build/index.js",
+  "main": "./build/index.js",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js"
+      "svelte": "./build/index.js"
     }
   },
   "description": "taleemPresentation library is an educational tool to run presentations. These presentations are in the form of slides which are run by this library. Students , techers , reserchers can create their own presentations and they will always be played the this library.",
