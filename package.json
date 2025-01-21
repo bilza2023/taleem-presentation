@@ -1,21 +1,20 @@
+
 {
-  "name": "taleem-presentation",
-  "version": "0.9.2",
-  "private": false,
-  "author": "Bilal Tariq",
-  "files": [
-    "build",
-    "static"
-  ],
-  "license": "ISC",
-  "type": "module",
-  "svelte": "./build/index.js",
-  "main": "./build/index.js",
-  "exports": {
-    ".": {
-      "svelte": "./build/index.js"
-    }
-  },
+"name": "taleem-presentation",
+"version": "0.9.2",
+"private": false,
+"author": "Bilal Tariq",
+"files": ["public", "static"],
+"license": "ISC",
+"type": "module",
+"svelte": "./public/index.js",
+"main": "./public/index.js",
+"exports": {
+  ".": {
+    "svelte": "./public/index.js"
+  }
+},
+
   "description": "taleemPresentation library is an educational tool to run presentations. These presentations are in the form of slides which are run by this library. Students , techers , reserchers can create their own presentations and they will always be played the this library.",
 
   "scripts": {
@@ -177,3 +176,7 @@
   },
   "homepage": "https://github.com/bilza2023/taleem-presentation#readme"
 }
+
+
+
+
