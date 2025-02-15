@@ -1,31 +1,29 @@
 <script>
     import { onMount, onDestroy } from "svelte";
     import TaleemCanvas from "taleem-canvas"; 
-    import Assets from "taleem-assets"; 
-    import addItems from "./addItems.js"; 
-    import loadImages from "$lib/loadImages.js";
-
+///////////////////////////////////////////////////////
+    export let items;
+    export let assets = {}; //asssets should come with images loaded
+    // assets.images = await loadImages(['/images/scene.png']);     
     let canvasElement;
     let taleem_canvas;
-
+    let interval=null;
+/////////////////////////////////////////////////////
     onMount(async () => {
     if (!canvasElement) return;
-
-        const assets = new Assets();
-        assets.images = await loadImages(['/images/scene.png']);     
         const ctx = canvasElement.getContext("2d");
-
-        taleem_canvas = new TaleemCanvas(canvasElement, ctx, assets);
-        addItems(taleem_canvas,assets); // Call the function to add items
-        taleem_canvas.draw();
-        return () => {
-            // canvas.destroy(); // Cleanup on unmount
-        };
+        taleem_canvas = new TaleemCanvas(canvasElement, ctx, assets,items);
+        taleem_canvas.addItems(items);
+        setInterval(gameloop,20);
+        
     });
-
+//////////////////////////////////////////////////////
+function gameloop(){if(taleem_canvas) taleem_canvas.draw() }
+//////////////////////////////////////////////////////
     onDestroy(() => {
-        if (taleem_canvas) taleem_canvas.destroy();
+        if (interval) clearInterval(interval)
     });
+
 </script>
 
 <canvas bind:this={canvasElement}></canvas>

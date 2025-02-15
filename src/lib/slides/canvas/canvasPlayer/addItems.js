@@ -7,9 +7,7 @@ export default function addItems(canvas,assets) {
     heading.x = 400;
     heading.y = 50;
     heading.set("text", "Welcome to the Presentation");
-    heading.color = "black";
-    heading.fontSize = 32;
-    heading.fontFamily = "Arial";
+    heading.set("color" ,"red");
 
     // Add main display image under the heading
     const mainImage = canvas.add.image();
