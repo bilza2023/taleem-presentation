@@ -7,7 +7,7 @@
 
     let assets = new Assets();
     let items;
-
+    let ready = false;
 onMount(async ()=>{
    
     items = [
@@ -35,12 +35,13 @@ onMount(async ()=>{
             "globalAlpha": 1
         }
     ]; 
-    assets.images = await loadImages(["/images/scene.png"]);    
+    assets.images = await loadImages(["/images/scene.png"]);
+    ready=true;    
 });    
 
 </script>
 
-{#if items}
+{#if ready}
         <CanvasPlayer 
             {items}
             {assets}

@@ -10,7 +10,7 @@
 
   function createTaleemCanvas(canvasElement) {
       const ctx = canvasElement.getContext("2d");
-      taleemCanvas = new TaleemCanvas(canvasElement, ctx, assets,slideExtra);
+      taleemCanvas = new TaleemCanvas(canvasElement, ctx, assets);
 
       // ✅ Add items after TaleemCanvas is initialized
       if (items && items.length > 0) {
