@@ -1,29 +1,25 @@
 <script>
-    import { onMount, onDestroy } from "svelte";
-    import TaleemCanvas from "taleem-canvas"; 
-///////////////////////////////////////////////////////
-    export let items;
-    export let assets = {}; //asssets should come with images loaded
-    // assets.images = await loadImages(['/images/scene.png']);     
-    let canvasElement;
-    let taleem_canvas;
-    let interval=null;
-/////////////////////////////////////////////////////
-    onMount(async () => {
-    if (!canvasElement) return;
-        const ctx = canvasElement.getContext("2d");
-        taleem_canvas = new TaleemCanvas(canvasElement, ctx, assets,items);
-        taleem_canvas.addItems(items);
-        setInterval(gameloop,20);
-        
-    });
-//////////////////////////////////////////////////////
-function gameloop(){if(taleem_canvas) taleem_canvas.draw() }
-//////////////////////////////////////////////////////
-    onDestroy(() => {
-        if (interval) clearInterval(interval)
-    });
+  import StaticPlayer from "../staticPlayer/StaticPlayer.svelte";
+  import TaleemCanvas from "taleem-canvas";
 
+  export let slideExtra;
+  export let items = []; // Default to empty array
+  export let assets;
+
+  let taleemCanvas = null; // Store reference for later use
+
+  function createTaleemCanvas(canvasElement) {
+      const ctx = canvasElement.getContext("2d");
+      taleemCanvas = new TaleemCanvas(canvasElement, ctx, assets,slideExtra);
+
+      // ✅ Add items after TaleemCanvas is initialized
+      if (items && items.length > 0) {
+          taleemCanvas.addItems(items);
+          taleemCanvas.draw(); // Ensure items appear immediately
+      }
+
+      return taleemCanvas;
+  }
 </script>
 
-<canvas bind:this={canvasElement}></canvas>
+<StaticPlayer {createTaleemCanvas} />
