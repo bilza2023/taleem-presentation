@@ -42,8 +42,6 @@
         display: flex;
         gap: 10px;
         background: #222;
-        padding: 2px;
-        border-radius: 5px;
     }
 
     button {
