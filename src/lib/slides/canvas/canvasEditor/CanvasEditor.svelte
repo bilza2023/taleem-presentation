@@ -1,11 +1,13 @@
 <script>
   import StaticPlayer from "../staticPlayer/StaticPlayer.svelte";
+  import EditorJs from "./EditorJs.js"
   import TaleemCanvas from "taleem-canvas";
   import AddToolbar from "./AddToolbar.svelte";
   import { onMount, onDestroy } from "svelte";
-
+/////////////////////////////////////////////
   let interval = null;
   let taleemCanvas = null;
+  let editor = null;
 
   function createTaleemCanvas(canvasElement) {
     const ctx = canvasElement.getContext("2d");
@@ -21,6 +23,9 @@
 
   onMount(() => {
     interval = setInterval(gameloop, 20); // Start gameloop
+    if(taleemCanvas){
+      editor = new EditorJs(taleemCanvas);
+    }
   });
 
   // Cleanup on unmount

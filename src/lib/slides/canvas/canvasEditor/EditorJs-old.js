@@ -1,4 +1,5 @@
-export default class CanvasEditor {
+
+export default class EditorJs {
   constructor(canvas) {
     this.canvas = canvas;  // Reference to TaleemCanvas
     this.selectedItem = null;
