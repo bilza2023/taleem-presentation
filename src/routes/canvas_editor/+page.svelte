@@ -1,9 +1,9 @@
 
-
-
 <script>
     import CanvasEditor from "$lib/slides/canvas/canvasEditor/CanvasEditor.svelte";
-</script>
-
-
-<CanvasEditor />
+    let items = []; // Store rectangles
+  </script>
+  
+  <!-- Render CanvasPlayer -->
+  <CanvasEditor {items} />
+  
