@@ -11,11 +11,10 @@
   import SpriteDD from "./sprite/SpriteDD.svelte";
   import IconDD from "./icon/IconDD.svelte";
   import LinesDD from "./lines/LinesDD.svelte";
-  
+  //--item is item-extra here
     export let item;
-    export let assets;
-    export let loadPresentationImages;
     export let dialogueBox;
+    debugger;
   
     const componentMap = {
 
@@ -28,12 +27,7 @@
       FontFamily :  FontFamilyDD,
       
     };
-
- function loadImage(selectedImage){
-  debugger;
-  item.itemExtra.src = selectedImage;
-  loadPresentationImages();
- }   
+ 
   </script>
   
   {#if item}
@@ -43,7 +37,9 @@
       <!-- Special Command Components -->
       {#if item.itemExtra.type === 'image'} 
         <div>
-          <div><ImagesListDD bind:extra={item.itemExtra} trigger={loadImage} listArray={assets.imagesList} /></div>
+          <div>
+            <!-- <ImagesListDD bind:extra={item.itemExtra} trigger={loadImage} listArray={assets.imagesList} /> -->
+          </div>
         </div>
       {/if}
 

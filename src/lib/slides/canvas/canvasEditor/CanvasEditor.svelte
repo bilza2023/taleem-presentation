@@ -4,10 +4,20 @@
   import TaleemCanvas from "taleem-canvas";
   import AddToolbar from "./AddToolbar.svelte";
   import { onMount, onDestroy } from "svelte";
+  import DialogueBox from "$lib/slides/dialogueBox/DialogueBox.svelte";
+  import getItemDialogue from "./dialogueBoxData/getItemDialogue.js";
 /////////////////////////////////////////////
   let interval = null;
   let taleemCanvas = null;
   let editor = null;
+  let SelectedItemFromEditor = null;
+  let SelectedDialogue = null;
+/////////////////////////////////////////////
+function getSelectedItemDislogueBox(SelectedDialogueIncomming){
+  debugger;
+  SelectedDialogue = SelectedDialogueIncomming;
+}
+/////////////////////////////////////////////
 
   function createTaleemCanvas(canvasElement) {
     const ctx = canvasElement.getContext("2d");
@@ -15,11 +25,30 @@
     return taleemCanvas;
   }
 
-  function gameloop() {
-    if (taleemCanvas) {
+function gameloop() {
+  if (taleemCanvas) {
+      if (editor && editor.selectedItem) {
+
+      } else {
+
+      }
       taleemCanvas.draw();
-    }
   }
+}
+
+// $: {
+//     if (editor && editor.selectedItem) {
+//         console.log("Item Selected:", editor.selectedItem);
+//         if (!SelectedDialogue) { // ✅ Assign only if not set
+//           SelectedItemFromEditor = editor.selectedItem; 
+//             SelectedDialogue = getItemDialogue();
+//         }
+//     } else {
+//         SelectedItemFromEditor = null;
+//         SelectedDialogue = null; // Reset when no item is selected
+//     }
+// }
+
 
   onMount(() => {
     interval = setInterval(gameloop, 20); // Start gameloop
@@ -45,7 +74,9 @@
     </div>
 
     <div class="dialogue-box">
-      dialogueBox
+      {#if SelectedItemFromEditor}
+          <DialogueBox item={SelectedItemFromEditor} dialogueBox={SelectedDialogue}  />
+      {/if} 
     </div>
   </div>
 </div>

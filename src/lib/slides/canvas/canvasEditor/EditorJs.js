@@ -1,4 +1,5 @@
 
+
 export default class EditorJs {
   constructor(canvas) {
     this.canvas = canvas;  // Reference to TaleemCanvas
@@ -9,7 +10,6 @@ export default class EditorJs {
     this.lastMouseX = 0;
     this.lastMouseY = 0;
     this._onMouseMoveDirect = null; // Holder for our direct mousemove listener
-
     // Attach event listeners
     this.canvas.onMouse("dblclick", this.handleDoubleClick.bind(this));
     this.canvas.onMouse("mousedown", this.handleMouseDown.bind(this));
@@ -27,6 +27,7 @@ export default class EditorJs {
         this.clearSelection();
       }
       this.selectedItem = item;
+
       this.createHandles();
     } else {
       this.clearSelection();
@@ -95,7 +96,6 @@ export default class EditorJs {
     this.updateHandles();
 }
 
-// 🔥 **New Function: Update Handle Positions Without Creating New Ones**
 updateHandles() {
     if (!this.selectedItem || this.handles.length === 0) return;
 
@@ -153,7 +153,7 @@ updateHandles() {
   }
 
   clearHandles() {
-    this.handles.forEach(handle => this.canvas.remove(handle));
+    this.handles.forEach(handle => this.canvas.deleteItem(handle));
     this.handles = [];
   }
 
