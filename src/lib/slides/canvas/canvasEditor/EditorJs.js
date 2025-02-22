@@ -1,9 +1,10 @@
 
 
 export default class EditorJs {
-  constructor(canvas) {
+  constructor(canvas,updateSelectedItem) {
     this.canvas = canvas;  // Reference to TaleemCanvas
     this.selectedItem = null;
+    this.updateSelectedItem = updateSelectedItem;
     this.handles = [];
     this.drag = false;
     this.activeHandle = null;
@@ -27,10 +28,11 @@ export default class EditorJs {
         this.clearSelection();
       }
       this.selectedItem = item;
-
+      this.updateSelectedItem(item);
       this.createHandles();
     } else {
       this.clearSelection();
+      this.updateSelectedItem(null);
     }
   }
 

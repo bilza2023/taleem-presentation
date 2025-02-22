@@ -5,59 +5,40 @@
   import AddToolbar from "./AddToolbar.svelte";
   import { onMount, onDestroy } from "svelte";
   import DialogueBox from "$lib/slides/dialogueBox/DialogueBox.svelte";
-  import getItemDialogue from "./dialogueBoxData/getItemDialogue.js";
+
 /////////////////////////////////////////////
+  
   let interval = null;
   let taleemCanvas = null;
   let editor = null;
   let SelectedItemFromEditor = null;
   let SelectedDialogue = null;
 /////////////////////////////////////////////
-function getSelectedItemDislogueBox(SelectedDialogueIncomming){
-  debugger;
-  SelectedDialogue = SelectedDialogueIncomming;
+function updateSelectedItem(newSelectedItem){
+  SelectedItemFromEditor = newSelectedItem;
+  console.log("SelectedItemFromEditor" ,SelectedItemFromEditor);
 }
 /////////////////////////////////////////////
-
-  function createTaleemCanvas(canvasElement) {
+function createTaleemCanvas(canvasElement) {
     const ctx = canvasElement.getContext("2d");
     taleemCanvas = new TaleemCanvas(canvasElement, ctx);
     return taleemCanvas;
-  }
+}
 
 function gameloop() {
   if (taleemCanvas) {
-      if (editor && editor.selectedItem) {
-
-      } else {
-
-      }
       taleemCanvas.draw();
   }
 }
-
-// $: {
-//     if (editor && editor.selectedItem) {
-//         console.log("Item Selected:", editor.selectedItem);
-//         if (!SelectedDialogue) { // ✅ Assign only if not set
-//           SelectedItemFromEditor = editor.selectedItem; 
-//             SelectedDialogue = getItemDialogue();
-//         }
-//     } else {
-//         SelectedItemFromEditor = null;
-//         SelectedDialogue = null; // Reset when no item is selected
-//     }
-// }
 
 
   onMount(() => {
     interval = setInterval(gameloop, 20); // Start gameloop
     if(taleemCanvas){
-      editor = new EditorJs(taleemCanvas);
+      editor = new EditorJs(taleemCanvas,updateSelectedItem);
     }
   });
 
-  // Cleanup on unmount
   onDestroy(() => {
     if (interval) clearInterval(interval);
   });
@@ -74,9 +55,12 @@ function gameloop() {
     </div>
 
     <div class="dialogue-box">
-      {#if SelectedItemFromEditor}
-          <DialogueBox item={SelectedItemFromEditor} dialogueBox={SelectedDialogue}  />
-      {/if} 
+      {#if SelectedItemFromEditor  == null}
+        <h3>Nothing Selected</h3>
+        {:else}
+        {(SelectedItemFromEditor.itemExtra.type).toUpperCase()}
+        <!-- <DialogueBox item={SelectedItemFromEditor.itemExtra}  /> -->
+      {/if}
     </div>
   </div>
 </div>
