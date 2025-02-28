@@ -4,19 +4,19 @@
   import TaleemCanvas from "taleem-canvas";
   import AddToolbar from "./AddToolbar.svelte";
   import { onMount, onDestroy } from "svelte";
-  import DialogueBox from "$lib/slides/dialogueBox/DialogueBox.svelte";
-
+  import DialogueBox from "./dialoguebox/Dialoguebox.svelte";
+  import CanvasDialogueBox from "./dialoguebox/items/CanvasDialogueBox.svelte";
 /////////////////////////////////////////////
-  
+export let slideExtra;
+export let items = [];
+
   let interval = null;
   let taleemCanvas = null;
   let editor = null;
-  let SelectedItemFromEditor = null;
-  let SelectedDialogue = null;
+  let selectedItemItemExtra = null;
 /////////////////////////////////////////////
 function updateSelectedItem(newSelectedItem){
-  SelectedItemFromEditor = newSelectedItem;
-  console.log("SelectedItemFromEditor" ,SelectedItemFromEditor);
+  selectedItemItemExtra = newSelectedItem;
 }
 /////////////////////////////////////////////
 function createTaleemCanvas(canvasElement) {
@@ -24,24 +24,32 @@ function createTaleemCanvas(canvasElement) {
     taleemCanvas = new TaleemCanvas(canvasElement, ctx);
     return taleemCanvas;
 }
-
 function gameloop() {
   if (taleemCanvas) {
       taleemCanvas.draw();
   }
 }
-
-
-  onMount(() => {
-    interval = setInterval(gameloop, 20); // Start gameloop
-    if(taleemCanvas){
-      editor = new EditorJs(taleemCanvas,updateSelectedItem);
+/////////////////////////////////////////////
+onMount(() => {
+ 
+  if(taleemCanvas){
+    editor = new EditorJs(taleemCanvas,updateSelectedItem);
+    if(items.length > 0 ){
+      editor.addItems(items);
     }
-  });
+    debugger;
+    taleemCanvas.setCanvasExtra(slideExtra);
+    // editor.canvas.background.itemExtra = slideExtra;
+    // editor.draw();
+  }
+  interval = setInterval(gameloop, 20); // Start gameloop
+});
 
-  onDestroy(() => {
-    if (interval) clearInterval(interval);
-  });
+onDestroy(() => {
+  if (interval) clearInterval(interval);
+});
+/////////////////////////////////////////////
+
 </script>
 
 {#if taleemCanvas}
@@ -55,11 +63,13 @@ function gameloop() {
     </div>
 
     <div class="dialogue-box">
-      {#if SelectedItemFromEditor  == null}
-        <h3>Nothing Selected</h3>
-        {:else}
-        {(SelectedItemFromEditor.itemExtra.type).toUpperCase()}
-        <!-- <DialogueBox item={SelectedItemFromEditor.itemExtra}  /> -->
+      
+      {#if selectedItemItemExtra  !== null}
+            <DialogueBox {selectedItemItemExtra}/>
+      {:else}
+            <!-- {#if slideExtra} -->
+            <CanvasDialogueBox {slideExtra}  />
+            <!-- {/if} -->
       {/if}
     </div>
   </div>

@@ -19,16 +19,18 @@ export default class EditorJs {
 
   // Change 1: Ignore double-clicks on handles
   handleDoubleClick(event, item) {
+    // debugger;
     if (item && item.type) {
       // If the clicked item is a handle, do nothing.
       return;
     }
     if (item) {
       if (this.selectedItem !== item) {
+        this.updateSelectedItem(item.itemExtra);
         this.clearSelection();
       }
       this.selectedItem = item;
-      this.updateSelectedItem(item);
+      this.updateSelectedItem(item.itemExtra);
       this.createHandles();
     } else {
       this.clearSelection();

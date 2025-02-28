@@ -1,18 +1,17 @@
 <!-- InputText.svelte -->
 <script>
-  import { createEventDispatcher } from 'svelte';
-  const dispatch = createEventDispatcher();
   
-  export let value;
+  export let selectedItemItemExtra;
+  export let field;
 
   function handleInput(e) {
-      value = e.target.value;
+    selectedItemItemExtra[field] = e.target.value;
   }
 </script>
 
 <input
   type="text"
-  bind:value
+  value={selectedItemItemExtra[field]}
   on:input={handleInput}
   class="bg-gray-900 text-white text-sm p-1 rounded-md border border-gray-600 focus:ring-1 focus:ring-pink-500"
 />

@@ -40,6 +40,6 @@
 	},
 	"dependencies": {
 		"howler": "^2.2.4",
-		"taleem-canvas": "^0.9.27"
+		"taleem-canvas": "^0.9.30"
 	}
 }

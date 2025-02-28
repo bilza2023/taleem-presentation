@@ -1,12 +1,14 @@
-<!-- InputNumber.svelte -->
+<!-- InputNumber -->
 <script>
-  export let value;
-  export let config;
+ 
+ export let selectedItemItemExtra;
+  export let field;
+  export let config = {min : 0, max : 100, step:1};
 
-  $: valueWithoutDecimal = value ? Math.trunc(value) : value;
+  $: valueWithoutDecimal = selectedItemItemExtra[field] ? Math.trunc(selectedItemItemExtra[field]) : selectedItemItemExtra[field];
 
   function handleInput(e) {
-      value = parseInt(e.target.value);
+      selectedItemItemExtra[field] = e.target.value;
   }
 </script>
 

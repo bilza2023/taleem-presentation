@@ -5,7 +5,7 @@
     import InputTextArea from './InputTextArea.svelte';
     import InputCheckbox from './InputCheckbox.svelte';
     import InputColor from './InputColor.svelte';
-    import FontFamilyDD from './FontFamilyDD.svelte';
+    import FontFamilyDD from '../canvas/canvasEditor/dialoguebox/inputs/FontFamilyDD.svelte';
     import ImagesListDD from './ImagesListDD.svelte';
   
   import SpriteDD from "./sprite/SpriteDD.svelte";
@@ -14,7 +14,7 @@
   //--item is item-extra here
     export let item;
     export let dialogueBox;
-    debugger;
+  
   
     const componentMap = {
 
